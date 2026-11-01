@@ -4,190 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio PPL - PPG Prajabatan</title>
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- Google Fonts: Plus Jakarta Sans -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #FFFDFD;
-            color: #4A4045;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        /* Mode Gelap Informatika Custom (Exact Palette from Screenshot) */
-        body.dark-mode {
-            background-color: #0b1329 !important;
-            color: #f1f5f9 !important;
-        }
-
-        body.dark-mode header {
-            background-color: rgba(11, 19, 41, 0.95) !important;
-            border-color: #1a2942 !important;
-        }
-
-        body.dark-mode .bg-white {
-            background-color: #121e36 !important;
-            border-color: #1e3254 !important;
-            color: #ffffff !important;
-        }
-
-        /* Perbaikan kontras khusus Hero/Sapaan & Card di Mode Gelap */
-        body.dark-mode section {
-            background-color: #0b1329 !important;
-        }
-
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #FFFDFD; color: #4A4045; transition: background-color 0.3s ease, color 0.3s ease; }
+        body.dark-mode { background-color: #0b1329 !important; color: #f1f5f9 !important; }
+        body.dark-mode header { background-color: rgba(11, 19, 41, 0.95) !important; border-color: #1a2942 !important; }
+        body.dark-mode .bg-white { background-color: #121e36 !important; border-color: #1e3254 !important; color: #ffffff !important; }
+        body.dark-mode section { background-color: #0b1329 !important; }
         body.dark-mode .bg-gradient-to-b.from-pink-50\/60.via-white.to-white,
         body.dark-mode .bg-gradient-to-b.from-pink-100\/50.via-pink-50\/30.to-white,
-        body.dark-mode .bg-gradient-to-b.from-rose-100\/50.via-pink-50\/30.to-white {
-            background: linear-gradient(to bottom, #0d172a, #0b1329, #0b1329) !important;
+        body.dark-mode .bg-gradient-to-b.from-rose-100\/50.via-pink-50\/30.to-white { background: linear-gradient(to bottom, #0d172a, #0b1329, #0b1329) !important; }
+        body.dark-mode .bg-pink-50\/60, body.dark-mode .bg-pink-50\/50, body.dark-mode .bg-pink-50\/40,
+        body.dark-mode .bg-pink-50\/30, body.dark-mode .bg-rose-50\/30, body.dark-mode .bg-gray-50 { background-color: #13223e !important; border-color: #1d3358 !important; }
+        body.dark-mode .bg-pink-100\/80 { background-color: #1a2e4a !important; color: #38bdf8 !important; border: 1px solid #234473; }
+        body.dark-mode .bg-gray-100\/80, body.dark-mode .bg-gray-100, body.dark-mode .bg-gray-200 { background-color: #1a2b4c !important; border-color: #243c68 !important; color: #f8fafc !important; }
+        body.dark-mode .text-gray-900, body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5 { color: #ffffff !important; }
+        body.dark-mode p, body.dark-mode span, body.dark-mode li { color: #cbd5e1; }
+        body.dark-mode .text-gray-900 { color: #ffffff !important; }
+        body.dark-mode .text-gray-800 { color: #f1f5f9 !important; }
+        body.dark-mode .text-gray-700, body.dark-mode .text-gray-600 { color: #cbd5e1 !important; }
+        body.dark-mode .text-pink-600, body.dark-mode .text-pink-500, body.dark-mode .text-pink-700,
+        body.dark-mode .text-rose-600, body.dark-mode .text-rose-700 { color: #38bdf8 !important; }
+        body.dark-mode .bg-pink-500, body.dark-mode .bg-pink-600, body.dark-mode .bg-rose-500, body.dark-mode .bg-rose-600 { background-color: #0ea5e9 !important; color: #0f172a !important; font-weight: 700 !important; }
+        body.dark-mode .bg-pink-100, body.dark-mode .bg-rose-100 { background-color: #15294a !important; color: #38bdf8 !important; border: 1px solid #1e3a66; }
+        body.dark-mode .relative.w-64.h-80, body.dark-mode .relative.w-72.h-96 { background-color: #121e36 !important; border-color: #1d3358 !important; }
+        body.dark-mode .border-l-4.border-pink-500 { border-left-color: #38bdf8 !important; background-color: #12223c !important; }
+        body.dark-mode .border-l-4.border-pink-500 p { color: #e2e8f0 !important; }
+        body.dark-mode .quote-box { background: linear-gradient(135deg, #12223c 0%, #0f1b32 50%, #15294a 100%) !important; border-color: #1e3a66 !important; color: #e2e8f0 !important; box-shadow: 0 4px 20px rgba(14, 165, 233, 0.10) !important; }
+        body.dark-mode .quote-box .quote-mark { background-color: #0a1a33 !important; color: #38bdf8 !important; border: 1px solid #1e3a66 !important; }
+        body.dark-mode .quote-box .quote-text { color: #e2e8f0 !important; }
+        body.dark-mode .quote-box .quote-divider { background-color: #38bdf8 !important; opacity: 0.6 !important; }
+        body.dark-mode .quote-box .quote-author { color: #7dd3fc !important; }
+        body.dark-mode .misi-utama-card { background: linear-gradient(to right, #15294a, #1a365d) !important; border: 1px solid #234473 !important; }
+        body.dark-mode .lptk-badge { background-color: #1a2e4a !important; border-color: #234473 !important; color: #38bdf8 !important; }
+        body.dark-mode .lptk-badge strong { color: #7dd3fc !important; }
+        @keyframes floatBounce { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-12px); } }
+        .animate-float-bounce { animation: floatBounce 3.5s ease-in-out infinite; }
+        @keyframes dropdownFadeIn {
+            from { opacity: 0; transform: translateY(-10px) scale(0.98); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
         }
-
-        body.dark-mode .bg-pink-50\/60,
-        body.dark-mode .bg-pink-50\/50,
-        body.dark-mode .bg-pink-50\/40,
-        body.dark-mode .bg-pink-50\/30,
-        body.dark-mode .bg-rose-50\/30,
-        body.dark-mode .bg-gray-50 {
-            background-color: #13223e !important;
-            border-color: #1d3358 !important;
-        }
-
-        body.dark-mode .bg-pink-100\/80 {
-            background-color: #1a2e4a !important;
-            color: #38bdf8 !important;
-            border: 1px solid #234473;
-        }
-
-        body.dark-mode .bg-gray-100\/80,
-        body.dark-mode .bg-gray-100,
-        body.dark-mode .bg-gray-200 {
-            background-color: #1a2b4c !important;
-            border-color: #243c68 !important;
-            color: #f8fafc !important;
-        }
-
-        body.dark-mode .text-gray-900,
-        body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5 {
-            color: #ffffff !important;
-        }
-
-        body.dark-mode p, body.dark-mode span, body.dark-mode li {
-            color: #cbd5e1;
-        }
-
-        body.dark-mode .text-gray-900 {
-            color: #ffffff !important;
-        }
-
-        body.dark-mode .text-gray-800 {
-            color: #f1f5f9 !important;
-        }
-
-        body.dark-mode .text-gray-700,
-        body.dark-mode .text-gray-600 {
-            color: #cbd5e1 !important;
-        }
-
-        /* Aksesori Warna Cyan/Teal Tech (Sesuai Screenshot) */
-        body.dark-mode .text-pink-600,
-        body.dark-mode .text-pink-500,
-        body.dark-mode .text-pink-700,
-        body.dark-mode .text-rose-600,
-        body.dark-mode .text-rose-700 {
-            color: #38bdf8 !important; /* Bright Cyan Blue */
-        }
-
-        body.dark-mode .bg-pink-500,
-        body.dark-mode .bg-pink-600,
-        body.dark-mode .bg-rose-500,
-        body.dark-mode .bg-rose-600 {
-            background-color: #0ea5e9 !important; /* Cyan Action Button */
-            color: #0f172a !important;
-            font-weight: 700 !important;
-        }
-
-        body.dark-mode .bg-pink-100,
-        body.dark-mode .bg-rose-100 {
-            background-color: #15294a !important;
-            color: #38bdf8 !important;
-            border: 1px solid #1e3a66;
-        }
-
-        /* Card Khusus Beranda / Hero Frame pada Dark Mode */
-        body.dark-mode .relative.w-64.h-80,
-        body.dark-mode .relative.w-72.h-96 {
-            background-color: #121e36 !important;
-            border-color: #1d3358 !important;
-        }
-
-        /* Quote box khusus hero */
-        body.dark-mode .border-l-4.border-pink-500 {
-            border-left-color: #38bdf8 !important;
-            background-color: #12223c !important;
-        }
-
-        body.dark-mode .border-l-4.border-pink-500 p {
-            color: #e2e8f0 !important;
-        }
-
-        /* ====== QUOTE BOX DARK MODE (FIXED) ====== */
-        body.dark-mode .quote-box {
-            background: linear-gradient(135deg, #12223c 0%, #0f1b32 50%, #15294a 100%) !important;
-            border-color: #1e3a66 !important;
-            color: #e2e8f0 !important;
-            box-shadow: 0 4px 20px rgba(14, 165, 233, 0.10) !important;
-        }
-
-        body.dark-mode .quote-box .quote-mark {
-            background-color: #0a1a33 !important;
-            color: #38bdf8 !important;
-            border: 1px solid #1e3a66 !important;
-        }
-
-        body.dark-mode .quote-box .quote-text {
-            color: #e2e8f0 !important;
-        }
-
-        body.dark-mode .quote-box .quote-divider {
-            background-color: #38bdf8 !important;
-            opacity: 0.6 !important;
-        }
-
-        body.dark-mode .quote-box .quote-author {
-            color: #7dd3fc !important;
-        }
-
-        /* Dark mode overrides for Misi Utama & LPTK badges */
-        body.dark-mode .misi-utama-card {
-            background: linear-gradient(to right, #15294a, #1a365d) !important;
-            border: 1px solid #234473 !important;
-        }
-
-        body.dark-mode .lptk-badge {
-            background-color: #1a2e4a !important;
-            border-color: #234473 !important;
-            color: #38bdf8 !important;
-        }
-
-        body.dark-mode .lptk-badge strong {
-            color: #7dd3fc !important;
-        }
-
-        /* Animasi Bounce Melayang Halus */
-        @keyframes floatBounce {
-            0%, 100% {
-                transform: translateY(0px);
-            }
-            50% {
-                transform: translateY(-12px);
-            }
-        }
-
-        .animate-float-bounce {
-            animation: floatBounce 3.5s ease-in-out infinite;
-        }
+        .animate-dropdown { animation: dropdownFadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1); }
     </style>
 </head>
 <body class="min-h-screen flex flex-col justify-between selection:bg-pink-200 selection:text-pink-900">
@@ -195,32 +53,23 @@
     <!-- HEADER / NAVBAR -->
     <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-pink-100 shadow-xs">
         <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-            <!-- Logo / Identitas -->
             <button onclick="switchTab('beranda')" class="flex items-center gap-3 group text-left cursor-pointer">
-                <!-- GANTI LINK GAMBAR GOOGLE DRIVE ANDA PADA SRC DI BAWAH INI -->
                 <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-pink-200 bg-pink-100 flex items-center justify-center group-hover:scale-105 transition shadow-2xs">
-                    <img src="https://drive.google.com/thumbnail?id=16apjHG37QhYckQbzYDjxotCqo26E-NzF&sz=w200" 
-                         alt="Logo E-Portofolio" 
-                         class="w-full h-full object-cover">
+                    <img src="https://drive.google.com/thumbnail?id=16apjHG37QhYckQbzYDjxotCqo26E-NzF&sz=w200" alt="Logo E-Portofolio" class="w-full h-full object-cover">
                 </div>
-                <div>
-                    <span class="block font-bold text-gray-800 text-sm tracking-wide">E-Portofolio PPG</span>
-                </div>
+                <div><span class="block font-bold text-gray-800 text-sm tracking-wide">E-Portofolio PPG</span></div>
             </button>
 
-            <!-- Menu Navigasi Utama -->
             <nav class="hidden md:flex items-center gap-2 bg-pink-50/50 p-1.5 rounded-full border border-pink-100/60">
                 <button id="nav-beranda" onclick="switchTab('beranda')" class="px-5 py-2 rounded-full text-sm font-semibold bg-white text-pink-600 shadow-xs transition cursor-pointer">Beranda</button>
                 <button id="nav-ppl-terbimbing" onclick="switchTab('ppl-terbimbing')" class="px-5 py-2 rounded-full text-sm font-medium text-gray-600 hover:text-pink-600 hover:bg-white/60 transition cursor-pointer">PPL Terbimbing</button>
                 <button id="nav-ppl-mandiri" onclick="switchTab('ppl-mandiri')" class="px-5 py-2 rounded-full text-sm font-medium text-gray-600 hover:text-pink-600 hover:bg-white/60 transition cursor-pointer">PPL Mandiri</button>
             </nav>
 
-            <!-- Toggle Theme Button (Icon Only) -->
             <button onclick="toggleTheme()" id="theme-toggle-btn" title="Ganti Mode Tampilan" class="flex items-center justify-center w-10 h-10 rounded-full border border-pink-200 bg-pink-50 text-pink-700 hover:bg-pink-100 transition cursor-pointer shadow-2xs text-lg">
                 <span id="theme-icon">🌙</span>
             </button>
 
-            <!-- Mobile Navigation -->
             <div class="md:hidden flex gap-2">
                 <button onclick="switchTab('beranda')" class="text-xs font-semibold px-3 py-1.5 bg-pink-100 text-pink-700 rounded-full">Beranda</button>
                 <button onclick="switchTab('ppl-terbimbing')" class="text-xs font-semibold px-3 py-1.5 bg-pink-50 text-pink-600 rounded-full border border-pink-200">Terbimbing</button>
@@ -229,52 +78,34 @@
         </div>
     </header>
 
-    <!-- MAIN CONTENT AREA -->
     <main class="flex-grow">
         
         <!-- HALAMAN BERANDA -->
         <div id="page-beranda" class="page-content">
-            <!-- SECTION 1: SAPAAN -->
             <section class="relative overflow-hidden pt-12 pb-8 md:pt-16 md:pb-10 bg-gradient-to-b from-pink-50/60 via-white to-white">
                 <div class="max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center">
-                    
                     <div class="md:col-span-7 space-y-6 text-center md:text-left">
-                        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-pink-100/80 text-pink-700 text-xs font-semibold tracking-wide uppercase">
-                            💻 PPG Prajabatan Informatika UNY
-                        </span>
-                        <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight leading-tight">
-                            Selamat Datang di halaman aku<br> <span class="text-pink-600">E-Portofolio Saya</span>
-                        </h1>
-                        <p class="text-lg text-gray-600 leading-relaxed font-normal">
-                            Perkenalkan, saya <strong class="text-gray-800">Putri Fitria Melinia Sari</strong>, calon guru profesional bidang studi <strong class="text-pink-600">Informatika</strong>. Website ini adalah rekam jejak, refleksi, dan filosofi saya selama menjalani Praktik Pengalaman Lapangan (PPL).
-                        </p>
-
+                        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-pink-100/80 text-pink-700 text-xs font-semibold tracking-wide uppercase">💻 PPG Prajabatan Informatika UNY</span>
+                        <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight leading-tight">Selamat Datang di<br> <span class="text-pink-600">E-Portofolio Saya</span></h1>
+                        <p class="text-lg text-gray-600 leading-relaxed font-normal">Perkenalkan, saya <strong class="text-gray-800">Putri Fitria Melinia Sari</strong>, calon guru profesional bidang studi <strong class="text-pink-600">Informatika</strong>. Website ini adalah rekam jejak, refleksi, dan filosofi saya selama menjalani Praktik Pengalaman Lapangan (PPL).</p>
                         <div class="pt-2 flex flex-wrap justify-center md:justify-start gap-4">
-                            <a href="#profil" class="px-6 py-3 bg-pink-500 hover:bg-pink-600 text-white font-semibold rounded-xl shadow-md transition transform hover:-translate-y-0.5 flex items-center gap-2">
-                                <span>Lihat Profil Saya</span> ➔
-                            </a>
+                            <a href="#profil" class="px-6 py-3 bg-pink-500 hover:bg-pink-600 text-white font-semibold rounded-xl shadow-md transition transform hover:-translate-y-0.5 flex items-center gap-2"><span>Lihat Profil Saya</span> ➔</a>
                         </div>
                     </div>
-
                     <div class="md:col-span-5 flex justify-center">
-                        <div class="relative animate-float-bounce">
-                            <div class="absolute -inset-2 bg-gradient-to-r from-pink-300 to-rose-200 rounded-3xl blur-lg opacity-40 animate-pulse"></div>
-                            <div class="relative w-64 h-80 md:w-72 md:h-96 rounded-2xl overflow-hidden bg-white p-3 border-2 border-pink-100 shadow-xl">
-                                <img src="https://drive.google.com/thumbnail?id=1JhIffkvFo4l_4ATw5uBwf0aAVBzv550V" 
-                                     alt="Foto Profil Mahasiswa PPL" 
-                                     class="w-full h-full object-cover rounded-xl filter contrast-95">
-                                <div class="absolute bottom-5 left-5 right-5 bg-gray-900/80 backdrop-blur-md text-white text-xs px-3 py-2 rounded-xl flex items-center gap-2 border border-white/20">
-                                    <span class="text-cyan-400 font-bold">&lt;/&gt;</span>
-                                    <span class="font-semibold">Informatika</span>
+                        <!-- FOTO PROFIL: lebih besar, tanpa caption, efek zoom-in saat hover -->
+                        <div class="relative animate-float-bounce group">
+                            <div class="absolute -inset-3 bg-gradient-to-r from-pink-300 to-rose-200 rounded-3xl blur-xl opacity-40 group-hover:opacity-70 transition duration-500 animate-pulse"></div>
+                            <div class="relative w-72 h-96 md:w-80 md:h-[440px] rounded-2xl overflow-hidden bg-white p-3 border-2 border-pink-100 shadow-xl transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-pink-300/50 group-hover:border-pink-300">
+                                <div class="w-full h-full rounded-xl overflow-hidden">
+                                    <img src="https://lh3.googleusercontent.com/d/1JhIffkvFo4l_4ATw5uBwf0aAVBzv550V=w1600" alt="Foto Profil Mahasiswa PPL" class="w-full h-full object-cover filter contrast-95 transition-transform duration-700 ease-out group-hover:scale-110">
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </section>
 
-            <!-- SECTION 2: PROFIL -->
             <section id="profil" class="pt-6 pb-16 bg-white">
                 <div class="max-w-4xl mx-auto px-6 space-y-12">
                     <div class="text-center space-y-3">
@@ -282,13 +113,10 @@
                         <div class="w-16 h-1 bg-pink-300 mx-auto rounded-full"></div>
                     </div>
 
-                    <!-- Tentang Saya (Baru) -->
                     <div class="bg-pink-50/40 border border-pink-100 rounded-3xl p-6 md:p-8 shadow-sm transition hover:shadow-md">
                         <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6">
                             <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-4 border-white shadow-md ring-2 ring-pink-300 flex-shrink-0">
-                                <img src="https://drive.google.com/thumbnail?id=1gTswmmCln11wREc3oYz3fHibkGbzhsoU" 
-                                     alt="Foto Pas Kecil Profil" 
-                                     class="w-full h-full object-cover">
+                                <img src="https://lh3.googleusercontent.com/d/1gTswmmCln11wREc3oYz3fHibkGbzhsoU=w600" alt="Foto Pas Kecil Profil" class="w-full h-full object-cover">
                             </div>
                             <div class="space-y-3 text-center sm:text-left flex-grow">
                                 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-pink-100 pb-3">
@@ -297,24 +125,15 @@
                                         <p class="text-xs text-pink-600 font-semibold mt-0.5">Mahasiswa PPG Prajabatan Informatika</p>
                                     </div>
                                     <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2 self-center sm:self-auto">
-                                        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-white border border-pink-200 text-gray-700 shadow-2xs">
-                                            <span class="text-pink-500">🆔</span>
-                                            <span>NIM: <strong class="text-pink-600">25105260629</strong></span>
-                                        </div>
-                                        <div class="lptk-badge inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-pink-100/80 border border-pink-200 text-pink-800 shadow-2xs">
-                                            <span>🎓</span>
-                                            <span>LPTK: <strong class="text-pink-900">UNY</strong></span>
-                                        </div>
+                                        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-white border border-pink-200 text-gray-700 shadow-2xs"><span class="text-pink-500">🆔</span><span>NIM: <strong class="text-pink-600">25105260629</strong></span></div>
+                                        <div class="lptk-badge inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-pink-100/80 border border-pink-200 text-pink-800 shadow-2xs"><span>🎓</span><span>LPTK: <strong class="text-pink-900">UNY</strong></span></div>
                                     </div>
                                 </div>
-                                <p class="text-gray-600 text-sm leading-relaxed text-justify">
-                                    Saya adalah seorang mahasiswi Pendidikan Profesi Guru (PPG) Prajabatan Gelombang 1 Bidang Studi Informatika di Universitas Negeri Yogyakarta. Memiliki dedikasi tinggi dalam mengembangkan pendekatan pembelajaran berbasis logika dan computational thinking yang interaktif, inklusif, serta relevan dengan perkembangan dunia digital siswa era Gen-Z.
-                                </p>
+                                <p class="text-gray-600 text-sm leading-relaxed text-justify">Saya adalah seorang mahasiswi Pendidikan Profesi Guru (PPG) Prajabatan Gelombang 1 Bidang Studi Informatika di Universitas Negeri Yogyakarta. Memiliki dedikasi tinggi dalam mengembangkan pendekatan pembelajaran berbasis logika dan computational thinking yang interaktif, inklusif, serta relevan dengan perkembangan dunia digital siswa era Gen-Z.</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Asal Daerah & Keunikan with Image -->
                     <div class="bg-pink-50/40 border border-pink-100 rounded-3xl p-8 md:p-10 shadow-sm transition hover:shadow-md">
                         <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
                             <div class="md:col-span-7 space-y-4">
@@ -322,20 +141,12 @@
                                     <div class="w-10 h-10 rounded-xl bg-pink-100 text-pink-600 flex items-center justify-center font-bold">📍</div>
                                     <h3 class="text-xl font-bold text-gray-800">Asal Daerah & Keunikan</h3>
                                 </div>
-                                <p class="text-gray-600 leading-relaxed text-justify">
-                                    Saya berasal dari sebuah daerah yang kaya akan nilai tradisi dan kearifan lokal yang sarat makna. Daerah asal saya tidak hanya dikenal karena keindahan lanskap alamnya, tetapi juga semangat gotong royong masyarakatnya yang masih terjaga erat dalam kehidupan sehari-hari. Nilai kebersamaan, keramahtamahan, serta filosofi hidup masyarakat lokal tersebut telah membentuk karakter dasar saya untuk selalu menghargai perbedaan, tekun dalam belajar, dan memiliki kepedulian sosial yang tinggi.
-                                </p>
+                                <p class="text-gray-600 leading-relaxed text-justify">Saya berasal dari sebuah daerah yang kaya akan nilai tradisi dan kearifan lokal yang sarat makna. Daerah asal saya tidak hanya dikenal karena keindahan lanskap alamnya, tetapi juga semangat gotong royong masyarakatnya yang masih terjaga erat dalam kehidupan sehari-hari. Nilai kebersamaan, keramahtamahan, serta filosofi hidup masyarakat lokal tersebut telah membentuk karakter dasar saya untuk selalu menghargai perbedaan, tekun dalam belajar, dan memiliki kepedulian sosial yang tinggi.</p>
                             </div>
                             <div class="md:col-span-5 flex justify-center">
                                 <div class="relative w-full h-52 md:h-60 rounded-2xl overflow-hidden border-2 border-pink-200/80 shadow-md group">
-                                    <img src="https://images.unsplash.com/photo-1596402184320-417e7178b2cd?auto=format&fit=crop&q=80&w=800" 
-                                         alt="Asal Daerah & Keunikan Budaya" 
-                                         class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-3">
-                                        <span class="text-xs font-semibold text-white bg-white/20 backdrop-blur-md px-3 py-1 rounded-lg border border-white/30">
-                                            🌄 Kearifan Lokal & Budaya
-                                        </span>
-                                    </div>
+                                    <img src="https://lh3.googleusercontent.com/d/127bj_KWEwkODqxT7dKoSfgt8HxkJRgx4" alt="Asal Daerah & Keunikan Budaya" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-3"></div>
                                 </div>
                             </div>
                         </div>
@@ -346,25 +157,16 @@
                             <div class="w-10 h-10 rounded-xl bg-pink-100 text-pink-600 flex items-center justify-center font-bold">💡</div>
                             <h3 class="text-xl font-bold text-gray-800">Inspirasi & Tujuan Menjadi Guru Profesional</h3>
                         </div>
-                        <p class="text-gray-600 leading-relaxed text-justify">
-                            Perjalanan saya menuju profesi guru dilandasi oleh keyakinan mendalam bahwa pendidikan adalah jembatan utama untuk memutus rantai ketertinggalan dan membuka peluang masa depan yang luas bagi anak bangsa. Sebagai calon guru profesional di era modern, tujuan saya adalah menghadirkan pembelajaran yang berpusat pada peserta didik (*student-centered learning*), inklusif, adaptif terhadap perkembangan teknologi, serta mampu menciptakan ruang kelas yang aman dan menyenangkan.
-                        </p>
+                        <p class="text-gray-600 leading-relaxed text-justify">Perjalanan saya menuju profesi guru dilandasi oleh keyakinan mendalam bahwa pendidikan adalah jembatan utama untuk memutus rantai ketertinggalan dan membuka peluang masa depan yang luas bagi anak bangsa. Sebagai calon guru profesional di era modern, tujuan saya adalah menghadirkan pembelajaran yang berpusat pada peserta didik (*student-centered learning*), inklusif, adaptif terhadap perkembangan teknologi, serta mampu menciptakan ruang kelas yang aman dan menyenangkan.</p>
                     </div>
 
-                    <!-- Quotes Section Ringkas & Cantik - FIXED Dark Mode -->
                     <div class="quote-box relative bg-gradient-to-br from-pink-100/90 via-pink-50 to-rose-100/70 border border-pink-200/80 text-gray-800 rounded-2xl p-4 sm:p-5 shadow-sm max-w-lg mx-auto">
                         <div class="relative z-10 text-center space-y-2">
-                            <div class="quote-mark inline-flex items-center justify-center w-8 h-8 rounded-full bg-pink-200/60 text-pink-600 font-serif text-lg mb-1 shadow-2xs">
-                                ❝
-                            </div>
-                            <blockquote class="quote-text text-xs sm:text-sm font-medium leading-relaxed italic text-gray-800 px-2">
-                                "Menjadi guru bukan sekadar profesi untuk mencari penghidupan, melainkan panggilan jiwa untuk merawat peradaban, menuntun langkah anak didik dengan hati, dan mencerahkan masa depan bangsa."
-                            </blockquote>
+                            <div class="quote-mark inline-flex items-center justify-center w-8 h-8 rounded-full bg-pink-200/60 text-pink-600 font-serif text-lg mb-1 shadow-2xs">❝</div>
+                            <blockquote class="quote-text text-xs sm:text-sm font-medium leading-relaxed italic text-gray-800 px-2">"Menjadi guru bukan sekadar profesi untuk mencari penghidupan, melainkan panggilan jiwa untuk merawat peradaban, menuntun langkah anak didik dengan hati, dan mencerahkan masa depan bangsa."</blockquote>
                             <div class="pt-2 flex items-center justify-center gap-2">
                                 <span class="quote-divider h-0.5 w-6 bg-pink-300 rounded-full"></span>
-                                <span class="quote-author font-bold text-[11px] tracking-wider uppercase text-pink-700">
-                                    Putri Fitria Melinia Sari
-                                </span>
+                                <span class="quote-author font-bold text-[11px] tracking-wider uppercase text-pink-700">Putri Fitria Melinia Sari</span>
                                 <span class="quote-divider h-0.5 w-6 bg-pink-300 rounded-full"></span>
                             </div>
                         </div>
@@ -375,7 +177,6 @@
 
         <!-- HALAMAN PPL TERBIMBING -->
         <div id="page-ppl-terbimbing" class="page-content hidden">
-            <!-- Header Section PPL Terbimbing -->
             <section class="bg-gradient-to-b from-pink-100/50 via-pink-50/30 to-white py-12 border-b border-pink-100">
                 <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
                     <div>
@@ -383,36 +184,62 @@
                         <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 mt-2">PPL Terbimbing</h1>
                         <p class="text-gray-600 mt-1">Kumpulan E-Portofolio 1 & 2 selama pelaksanaan PPL Terbimbing</p>
                     </div>
-
-                    <!-- Dropdown Navigasi PPL Terbimbing -->
                     <div class="relative w-full md:w-auto">
-                        <button onclick="toggleEportMenu()" class="w-full md:w-auto flex items-center justify-between gap-3 px-5 py-3 bg-white border border-pink-200 rounded-2xl shadow-sm hover:border-pink-300 text-pink-700 font-semibold cursor-pointer">
+                        <button onclick="toggleEportMenu()" class="w-full md:w-auto flex items-center justify-between gap-3 px-5 py-3 bg-white border border-pink-200 rounded-2xl shadow-sm hover:border-pink-300 hover:shadow-md text-pink-700 font-semibold cursor-pointer transition-all">
                             <span class="flex items-center gap-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
                                 Navigasi E-Portofolio
                             </span>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform duration-200" id="menu-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform duration-200" id="menu-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
                         </button>
-
-                        <div id="eport-dropdown" class="hidden absolute right-0 mt-2 w-full md:w-72 bg-white rounded-2xl shadow-xl border border-pink-100 z-30 p-3 space-y-3">
-                            <div>
-                                <div class="px-3 py-1 text-xs font-bold text-pink-500 uppercase tracking-wider">E-Portofolio 1</div>
-                                <div class="mt-1 space-y-1">
-                                    <a href="#analisis-artefak" onclick="closeEportMenu()" class="block px-3 py-2 text-sm text-gray-700 hover:bg-pink-50 hover:text-pink-600 rounded-xl transition">1. Analisis Artefak</a>
-                                    <a href="#lampiran-penilaian" onclick="closeEportMenu()" class="block px-3 py-2 text-sm text-gray-700 hover:bg-pink-50 hover:text-pink-600 rounded-xl transition">2. Lampiran Penilaian</a>
-                                    <a href="#model-guru" onclick="closeEportMenu()" class="block px-3 py-2 text-sm text-gray-700 hover:bg-pink-50 hover:text-pink-600 rounded-xl transition">3. Model Guru</a>
-                                </div>
+                        <!-- DROPDOWN NAVIGASI (versi baru) -->
+                        <div id="eport-dropdown" class="hidden absolute right-0 mt-3 w-full md:w-80 z-30 rounded-2xl shadow-2xl border border-pink-100 overflow-hidden bg-white animate-dropdown">
+                            <div class="bg-gradient-to-r from-pink-500 via-pink-500 to-rose-400 px-4 py-3 flex items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" /></svg>
+                                <span class="text-white font-bold text-sm tracking-wide">Daftar E-Portofolio</span>
                             </div>
-                            <hr class="border-pink-100">
-                            <div>
-                                <div class="px-3 py-1 text-xs font-bold text-pink-500 uppercase tracking-wider">E-Portofolio 2</div>
-                                <div class="mt-1 space-y-1">
-                                    <a href="#refleksi-pengalaman" onclick="closeEportMenu()" class="block px-3 py-2 text-sm text-gray-700 hover:bg-pink-50 hover:text-pink-600 rounded-xl transition">1. Refleksi Pengalaman Belajar</a>
-                                    <a href="#filosofi-mengajar" onclick="closeEportMenu()" class="block px-3 py-2 text-sm text-gray-700 hover:bg-pink-50 hover:text-pink-600 rounded-xl transition">2. Filosofi Mengajar</a>
+                            <div class="p-3 space-y-3">
+                                <div>
+                                    <div class="px-2 py-1.5 flex items-center gap-2">
+                                        <span class="w-6 h-6 rounded-lg bg-gradient-to-br from-pink-500 to-rose-400 text-white flex items-center justify-center text-xs font-bold shadow-sm">1</span>
+                                        <span class="text-xs font-bold text-pink-500 uppercase tracking-wider">E-Portofolio 1</span>
+                                    </div>
+                                    <div class="mt-1 space-y-1">
+                                        <a href="#analisis-artefak" onclick="closeEportMenu()" class="group flex items-center gap-3 px-3 py-2.5 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-pink-50 hover:to-rose-50 hover:text-pink-700 rounded-xl transition-all">
+                                            <span class="w-8 h-8 rounded-lg bg-pink-50 group-hover:bg-pink-500 text-pink-600 group-hover:text-white flex items-center justify-center text-base transition-all shadow-2xs">📄</span>
+                                            <span class="font-medium">Analisis Artefak</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-auto text-gray-300 group-hover:text-pink-500 group-hover:translate-x-1 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                                        </a>
+                                        <a href="#lampiran-penilaian" onclick="closeEportMenu()" class="group flex items-center gap-3 px-3 py-2.5 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-pink-50 hover:to-rose-50 hover:text-pink-700 rounded-xl transition-all">
+                                            <span class="w-8 h-8 rounded-lg bg-pink-50 group-hover:bg-pink-500 text-pink-600 group-hover:text-white flex items-center justify-center text-base transition-all shadow-2xs">📋</span>
+                                            <span class="font-medium">Lampiran Penilaian</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-auto text-gray-300 group-hover:text-pink-500 group-hover:translate-x-1 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                                        </a>
+                                        <a href="#model-guru" onclick="closeEportMenu()" class="group flex items-center gap-3 px-3 py-2.5 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-pink-50 hover:to-rose-50 hover:text-pink-700 rounded-xl transition-all">
+                                            <span class="w-8 h-8 rounded-lg bg-pink-50 group-hover:bg-pink-500 text-pink-600 group-hover:text-white flex items-center justify-center text-base transition-all shadow-2xs">🎯</span>
+                                            <span class="font-medium">Model Guru</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-auto text-gray-300 group-hover:text-pink-500 group-hover:translate-x-1 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="h-px bg-gradient-to-r from-transparent via-pink-200 to-transparent"></div>
+                                <div>
+                                    <div class="px-2 py-1.5 flex items-center gap-2">
+                                        <span class="w-6 h-6 rounded-lg bg-gradient-to-br from-pink-600 to-rose-500 text-white flex items-center justify-center text-xs font-bold shadow-sm">2</span>
+                                        <span class="text-xs font-bold text-pink-500 uppercase tracking-wider">E-Portofolio 2</span>
+                                    </div>
+                                    <div class="mt-1 space-y-1">
+                                        <a href="#refleksi-pengalaman" onclick="closeEportMenu()" class="group flex items-center gap-3 px-3 py-2.5 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-pink-50 hover:to-rose-50 hover:text-pink-700 rounded-xl transition-all">
+                                            <span class="w-8 h-8 rounded-lg bg-pink-50 group-hover:bg-pink-500 text-pink-600 group-hover:text-white flex items-center justify-center text-base transition-all shadow-2xs">📝</span>
+                                            <span class="font-medium">Refleksi Pengalaman Belajar</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-auto text-gray-300 group-hover:text-pink-500 group-hover:translate-x-1 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                                        </a>
+                                        <a href="#filosofi-mengajar" onclick="closeEportMenu()" class="group flex items-center gap-3 px-3 py-2.5 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-pink-50 hover:to-rose-50 hover:text-pink-700 rounded-xl transition-all">
+                                            <span class="w-8 h-8 rounded-lg bg-pink-50 group-hover:bg-pink-500 text-pink-600 group-hover:text-white flex items-center justify-center text-base transition-all shadow-2xs">💡</span>
+                                            <span class="font-medium">Filosofi Mengajar</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-auto text-gray-300 group-hover:text-pink-500 group-hover:translate-x-1 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -420,10 +247,7 @@
                 </div>
             </section>
 
-            <!-- Isi Halaman PPL Terbimbing -->
             <div class="max-w-5xl mx-auto px-6 py-12 space-y-16">
-                
-                <!-- E-PORTOFOLIO 1 -->
                 <div class="space-y-8">
                     <div class="flex items-center gap-4">
                         <span class="px-4 py-1.5 bg-pink-500 text-white font-bold text-sm rounded-full">BAGIAN 1</span>
@@ -431,41 +255,26 @@
                         <div class="flex-grow h-px bg-pink-100"></div>
                     </div>
 
-                    <!-- 1. Analisis Artefak -->
+                    <!-- Analisis Artefak -->
                     <div id="analisis-artefak" class="bg-white border border-pink-100 rounded-3xl p-6 md:p-8 shadow-xs space-y-6 hover:border-pink-200 transition">
                         <div class="flex items-center gap-3">
                             <span class="w-8 h-8 bg-pink-100 text-pink-600 rounded-xl flex items-center justify-center font-bold text-sm">1</span>
                             <h3 class="text-xl font-bold text-gray-800">Analisis Artefak</h3>
                         </div>
-                        <p class="text-gray-600 leading-relaxed text-sm">
-                            Pilih salah satu komponen artefak di bawah untuk melihat analisis rinci mengenai kendala, teori pedagogi, faktor keberhasilan, adaptasi kelas, serta pratinjau dokumen PDF per siklusnya:
-                        </p>
+                        <p class="text-gray-600 leading-relaxed text-sm">Pilih salah satu komponen artefak di bawah untuk melihat analisis rinci mengenai kendala, teori pedagogi, faktor keberhasilan, adaptasi kelas, serta pratinjau dokumen PDF per siklusnya:</p>
 
-                        <!-- Menu Pilihan Tab Artefak -->
                         <div class="flex flex-wrap gap-2 border-b border-gray-200 pb-3">
-                            <button onclick="switchArtefakTab('modul-ajar')" id="tab-modul-ajar" class="artefak-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer bg-pink-600 text-white shadow-xs">
-                                📖 Modul Ajar / RPP
-                            </button>
-                            <button onclick="switchArtefakTab('media-pembelajaran')" id="tab-media-pembelajaran" class="artefak-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer text-gray-600 hover:text-pink-600 hover:bg-pink-50">
-                                🖼️ Media Pembelajaran
-                            </button>
-                            <button onclick="switchArtefakTab('lkpd')" id="tab-lkpd" class="artefak-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer text-gray-600 hover:text-pink-600 hover:bg-pink-50">
-                                📋 LKPD
-                            </button>
-                            <button onclick="switchArtefakTab('instrumen-asesmen')" id="tab-instrumen-asesmen" class="artefak-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer text-gray-600 hover:text-pink-600 hover:bg-pink-50">
-                                📑 Instrumen Asesmen
-                            </button>
-                            <button onclick="switchArtefakTab('dokumentasi')" id="tab-dokumentasi" class="artefak-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer text-gray-600 hover:text-pink-600 hover:bg-pink-50">
-                                📷 Dokumentasi
-                            </button>
+                            <button onclick="switchArtefakTab('modul-ajar')" id="tab-modul-ajar" class="artefak-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer bg-pink-600 text-white shadow-xs">📖 Modul Ajar / RPP</button>
+                            <button onclick="switchArtefakTab('media-pembelajaran')" id="tab-media-pembelajaran" class="artefak-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer text-gray-600 hover:text-pink-600 hover:bg-pink-50">🖼️ Media Pembelajaran</button>
+                            <button onclick="switchArtefakTab('lkpd')" id="tab-lkpd" class="artefak-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer text-gray-600 hover:text-pink-600 hover:bg-pink-50">📋 LKPD</button>
+                            <button onclick="switchArtefakTab('instrumen-asesmen')" id="tab-instrumen-asesmen" class="artefak-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer text-gray-600 hover:text-pink-600 hover:bg-pink-50">📑 Instrumen Asesmen</button>
+                            <button onclick="switchArtefakTab('dokumentasi')" id="tab-dokumentasi" class="artefak-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer text-gray-600 hover:text-pink-600 hover:bg-pink-50">📷 Dokumentasi</button>
                         </div>
 
-                        <!-- Konten Dinamis Analisis Artefak -->
-                        <div class="bg-pink-50/40 border border-pink-100 rounded-2xl p-6 space-y-6">
+                        <!-- ====== ANALYSIS VIEW (untuk semua tab KECUALI dokumentasi) ====== -->
+                        <div id="artefak-analysis-view" class="bg-pink-50/40 border border-pink-100 rounded-2xl p-6 space-y-6">
                             <div class="flex items-center justify-between border-b border-pink-100 pb-3">
-                                <h4 id="artefak-title" class="font-bold text-gray-800 text-lg flex items-center gap-2">
-                                    📖 Modul Ajar / RPP
-                                </h4>
+                                <h4 id="artefak-title" class="font-bold text-gray-800 text-lg flex items-center gap-2">📖 Modul Ajar / RPP</h4>
                                 <span class="text-xs bg-pink-100 text-pink-700 px-3 py-1 rounded-full font-medium">Analisis Produk</span>
                             </div>
 
@@ -488,51 +297,56 @@
                                 </div>
                             </div>
 
-                            <!-- SUBSECTION: PRATINJAU DOKUMEN PDF PER SIKLUS -->
                             <div class="pt-6 border-t border-pink-100 space-y-6">
                                 <div class="border-b-2 border-pink-500 pb-2 inline-block">
-                                    <h4 class="text-lg font-bold text-gray-800 flex items-center gap-2">
-                                        📄 Pratinjau Dokumen per Siklus
-                                    </h4>
+                                    <h4 class="text-lg font-bold text-gray-800 flex items-center gap-2">📄 Pratinjau Dokumen per Siklus</h4>
                                 </div>
-
                                 <div class="flex items-center gap-2 border-b border-gray-100 pb-3">
-                                    <button onclick="switchSiklusTab('siklus-1')" id="tab-s-siklus-1" class="siklus-tab px-5 py-2 rounded-xl text-sm font-semibold transition cursor-pointer bg-white text-pink-600 border border-pink-200 shadow-xs">
-                                        Siklus 1
-                                    </button>
-                                    <button onclick="switchSiklusTab('siklus-2')" id="tab-s-siklus-2" class="siklus-tab px-5 py-2 rounded-xl text-sm font-medium transition cursor-pointer text-gray-600 hover:text-pink-600 hover:bg-pink-50">
-                                        Siklus 2
-                                    </button>
-                                    <button onclick="switchSiklusTab('siklus-3')" id="tab-s-siklus-3" class="siklus-tab px-5 py-2 rounded-xl text-sm font-medium transition cursor-pointer text-gray-600 hover:text-pink-600 hover:bg-pink-50">
-                                        Siklus 3
-                                    </button>
+                                    <button onclick="switchSiklusTab('siklus-1')" id="tab-s-siklus-1" class="siklus-tab px-5 py-2 rounded-xl text-sm font-semibold transition cursor-pointer bg-white text-pink-600 border border-pink-200 shadow-xs">Siklus 1</button>
+                                    <button onclick="switchSiklusTab('siklus-2')" id="tab-s-siklus-2" class="siklus-tab px-5 py-2 rounded-xl text-sm font-medium transition cursor-pointer text-gray-600 hover:text-pink-600 hover:bg-pink-50">Siklus 2</button>
+                                    <button onclick="switchSiklusTab('siklus-3')" id="tab-s-siklus-3" class="siklus-tab px-5 py-2 rounded-xl text-sm font-medium transition cursor-pointer text-gray-600 hover:text-pink-600 hover:bg-pink-50">Siklus 3</button>
                                 </div>
-
                                 <div class="bg-gray-50 border border-pink-100 rounded-2xl overflow-hidden shadow-xs">
                                     <div class="bg-gray-100/80 px-5 py-3 border-b border-gray-200 flex items-center justify-between">
-                                        <span id="pdf-doc-title" class="font-bold text-gray-700 text-sm">
-                                            Modul Ajar Siklus 1
-                                        </span>
-                                        <a id="pdf-download-link" href="https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/view?usp=sharing" target="_blank" class="text-xs font-semibold text-pink-600 hover:text-pink-800 hover:underline flex items-center gap-1">
-                                            <span>Buka PDF di Google Drive</span> ↗
-                                        </a>
+                                        <span id="pdf-doc-title" class="font-bold text-gray-700 text-sm">Modul Ajar Siklus 1</span>
+                                        <a id="pdf-download-link" href="https://drive.google.com/file/d/1aOmvfEOC7LJ-exv6DdGKQdCNJuaA-7nf/view?usp=sharing" target="_blank" class="text-xs font-semibold text-pink-600 hover:text-pink-800 hover:underline flex items-center gap-1"><span>Buka PDF di Google Drive</span> ↗</a>
                                     </div>
-
                                     <div class="w-full h-96 md:h-[480px] bg-gray-200 relative">
-                                        <iframe id="pdf-frame" 
-                                                src="https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/preview" 
-                                                class="w-full h-full border-none"
-                                                title="Pratinjau Dokumen PDF Google Drive"
-                                                allow="autoplay">
-                                        </iframe>
+                                        <iframe id="pdf-frame" src="https://drive.google.com/file/d/1aOmvfEOC7LJ-exv6DdGKQdCNJuaA-7nf/preview" class="w-full h-full border-none" title="Pratinjau Dokumen PDF Google Drive" allow="autoplay"></iframe>
                                     </div>
                                 </div>
                             </div>
+                        </div>
 
+                        <!-- ====== GALLERY VIEW (khusus tab dokumentasi) ====== -->
+                        <div id="artefak-gallery-view" class="hidden bg-pink-50/40 border border-pink-100 rounded-2xl p-6 space-y-6">
+                            <div class="flex items-center justify-between border-b border-pink-100 pb-3">
+                                <h4 class="font-bold text-gray-800 text-lg flex items-center gap-2">📷 Galeri Dokumentasi</h4>
+                                <span class="text-xs bg-pink-100 text-pink-700 px-3 py-1 rounded-full font-medium">Galeri Kegiatan</span>
+                            </div>
+
+                            <p class="text-xs md:text-sm text-gray-600 leading-relaxed">Pilih kategori kegiatan di bawah untuk melihat kumpulan foto & video dokumentasi. Klik salah satu media untuk membuka versi lengkap di Google Drive.</p>
+
+                            <!-- Sub-menu kategori -->
+                            <div class="flex flex-wrap gap-2 border-b border-gray-100 pb-3">
+                                <button onclick="switchDokumentasiTab('penerjunan')" id="tab-dok-penerjunan" class="dok-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer bg-pink-600 text-white shadow-xs">🎯 Penerjunan Mahasiswa PPL</button>
+                                <button onclick="switchDokumentasiTab('asistensi')" id="tab-dok-asistensi" class="dok-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer text-gray-600 hover:text-pink-600 hover:bg-pink-50">📚 Asistensi Mengajar</button>
+                                <button onclick="switchDokumentasiTab('praktik-mengajar')" id="tab-dok-praktik-mengajar" class="dok-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer text-gray-600 hover:text-pink-600 hover:bg-pink-50">🎓 Praktik Mengajar</button>
+                                <button onclick="switchDokumentasiTab('non-mengajar')" id="tab-dok-non-mengajar" class="dok-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer text-gray-600 hover:text-pink-600 hover:bg-pink-50">🤝 Kegiatan Non-Mengajar</button>
+                            </div>
+
+                            <!-- Grid galeri (di-render via JS) -->
+                            <div id="dok-gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+
+                            <!-- Empty state -->
+                            <div id="dok-gallery-empty" class="hidden text-center py-10 text-gray-500 text-sm">
+                                <p class="text-3xl mb-2">📭</p>
+                                <p>Belum ada dokumentasi untuk kategori ini.</p>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- 2. Lampiran Penilaian -->
+                    <!-- Lampiran Penilaian -->
                     <div id="lampiran-penilaian" class="bg-white border border-pink-100 rounded-3xl p-6 md:p-8 shadow-xs space-y-8 hover:border-pink-200 transition">
                         <div class="flex items-center gap-3">
                             <span class="w-8 h-8 bg-pink-100 text-pink-600 rounded-xl flex items-center justify-center font-bold text-sm">2</span>
@@ -555,24 +369,21 @@
                                     <button onclick="switchLampiran7('siklus-3')" id="tab-l7-siklus-3" class="tab-l7 px-3 py-1.5 rounded-lg text-xs font-medium text-gray-600 hover:text-pink-600 transition cursor-pointer">Siklus 3</button>
                                 </div>
                             </div>
-
                             <div class="bg-white p-4 rounded-xl border border-pink-100 shadow-2xs space-y-1">
-                                <span class="text-xs font-semibold text-pink-500 uppercase tracking-wider">Skor Evaluasi Guru Pamong</span>
+                                <span class="text-xs font-semibold text-pink-500 uppercase tracking-wider">Skor Evaluasi Guru Pamong (Skala 1-4)</span>
                                 <div class="flex items-baseline gap-2">
-                                    <span id="l7-score" class="text-3xl font-extrabold text-pink-600">92.5</span>
+                                    <span id="l7-score" class="text-3xl font-extrabold text-pink-600">3</span>
+                                    <span class="text-sm font-semibold text-gray-400">/ 4</span>
                                 </div>
                                 <p id="l7-evaluator" class="text-xs text-gray-500">Penilai: Guru Pamong PPL Terbimbing</p>
                             </div>
-
                             <div class="bg-gray-50 border border-pink-100 rounded-xl overflow-hidden shadow-xs">
                                 <div class="bg-gray-100 px-4 py-2.5 border-b border-gray-200 flex items-center justify-between text-xs">
                                     <span id="l7-doc-title" class="font-bold text-gray-700">Lampiran 7 Siklus 1</span>
-                                    <a id="l7-download-link" href="https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/view?usp=sharing" target="_blank" class="font-semibold text-pink-600 hover:text-pink-800 hover:underline flex items-center gap-1">
-                                        Buka Dokumen ↗
-                                    </a>
+                                    <a id="l7-download-link" href="https://drive.google.com/file/d/1HAaITRx5-CTPs509RaafyrTaEqNxT9ae/view?usp=sharing" target="_blank" class="font-semibold text-pink-600 hover:text-pink-800 hover:underline flex items-center gap-1">Buka Dokumen ↗</a>
                                 </div>
                                 <div class="w-full h-80 md:h-[400px] bg-gray-200">
-                                    <iframe id="l7-pdf-frame" src="https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/preview" class="w-full h-full border-none" title="Pratinjau Lampiran 7"></iframe>
+                                    <iframe id="l7-pdf-frame" src="https://drive.google.com/file/d/1HAaITRx5-CTPs509RaafyrTaEqNxT9ae/preview" class="w-full h-full border-none" title="Pratinjau Lampiran 7"></iframe>
                                 </div>
                             </div>
                         </div>
@@ -590,30 +401,27 @@
                                     <button onclick="switchLampiran8('siklus-3')" id="tab-l8-siklus-3" class="tab-l8 px-3 py-1.5 rounded-lg text-xs font-medium text-gray-600 hover:text-pink-600 transition cursor-pointer">Siklus 3</button>
                                 </div>
                             </div>
-
                             <div class="bg-white p-4 rounded-xl border border-pink-100 shadow-2xs space-y-1">
-                                <span class="text-xs font-semibold text-pink-500 uppercase tracking-wider">Skor Evaluasi Guru Pamong</span>
+                                <span class="text-xs font-semibold text-pink-500 uppercase tracking-wider">Skor Evaluasi Guru Pamong (Skala 1-4)</span>
                                 <div class="flex items-baseline gap-2">
-                                    <span id="l8-score" class="text-3xl font-extrabold text-pink-600">94.0</span>
+                                    <span id="l8-score" class="text-3xl font-extrabold text-pink-600">3</span>
+                                    <span class="text-sm font-semibold text-gray-400">/ 4</span>
                                 </div>
                                 <p id="l8-evaluator" class="text-xs text-gray-500">Penilai: Guru Pamong PPL Terbimbing</p>
                             </div>
-
                             <div class="bg-gray-50 border border-pink-100 rounded-xl overflow-hidden shadow-xs">
                                 <div class="bg-gray-100 px-4 py-2.5 border-b border-gray-200 flex items-center justify-between text-xs">
                                     <span id="l8-doc-title" class="font-bold text-gray-700">Lampiran 8 Siklus 1</span>
-                                    <a id="l8-download-link" href="https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/view?usp=sharing" target="_blank" class="font-semibold text-pink-600 hover:text-pink-800 hover:underline flex items-center gap-1">
-                                        Buka Dokumen ↗
-                                    </a>
+                                    <a id="l8-download-link" href="https://drive.google.com/file/d/1uL8LgrhrqcQh6-dCSo6YYxyvdzqwtWBu/view?usp=sharing" target="_blank" class="font-semibold text-pink-600 hover:text-pink-800 hover:underline flex items-center gap-1">Buka Dokumen ↗</a>
                                 </div>
                                 <div class="w-full h-80 md:h-[400px] bg-gray-200">
-                                    <iframe id="l8-pdf-frame" src="https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/preview" class="w-full h-full border-none" title="Pratinjau Lampiran 8"></iframe>
+                                    <iframe id="l8-pdf-frame" src="https://drive.google.com/file/d/1uL8LgrhrqcQh6-dCSo6YYxyvdzqwtWBu/preview" class="w-full h-full border-none" title="Pratinjau Lampiran 8"></iframe>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- 3. Model Guru -->
+                    <!-- Model Guru -->
                     <div id="model-guru" class="bg-white border border-pink-100 rounded-3xl p-6 md:p-8 shadow-xs space-y-6 hover:border-pink-200 transition">
                         <div class="flex items-center gap-3 border-b border-pink-100 pb-4">
                             <span class="w-8 h-8 bg-pink-100 text-pink-600 rounded-xl flex items-center justify-center font-bold text-sm">3</span>
@@ -622,22 +430,14 @@
                                 <p class="text-xs text-gray-500">Misi, Kompetensi, dan Karakter Pendidik Profesional</p>
                             </div>
                         </div>
-
-                        <!-- Misi Utama -->
                         <div class="misi-utama-card bg-gradient-to-r from-pink-500 to-rose-400 text-white rounded-2xl p-6 space-y-3 shadow-sm border border-pink-300/30">
                             <span class="text-xs font-extrabold uppercase tracking-widest bg-white/20 px-3 py-1 rounded-full text-white">🎯 Misi Utama Pendidik</span>
                             <h4 class="text-lg font-bold text-white">Menjadi Menara Suar Pembelajaran Berkesadaran & Inklusif</h4>
-                            <p class="text-sm text-pink-50 leading-relaxed">
-                                Merancang lingkungan belajar berdiferensiasi yang menghargai setiap potensi unik peserta didik, memfasilitasi rasa ingin tahu tanpa batas, serta membangun iklim kelas yang aman, empatik, dan berkesadaran.
-                            </p>
+                            <p class="text-sm text-pink-50 leading-relaxed">Merancang lingkungan belajar berdiferensiasi yang menghargai setiap potensi unik peserta didik, memfasilitasi rasa ingin tahu tanpa batas, serta membangun iklim kelas yang aman, empatik, dan berkesadaran.</p>
                         </div>
-
-                        <!-- Kompetensi & Karakter -->
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div class="bg-pink-50/40 border border-pink-100 rounded-2xl p-5 space-y-3">
-                                <h4 class="font-bold text-pink-700 text-base flex items-center gap-2">
-                                    📚 Kompetensi Utama Guru
-                                </h4>
+                                <h4 class="font-bold text-pink-700 text-base flex items-center gap-2">📚 Kompetensi Utama Guru</h4>
                                 <ul class="text-xs md:text-sm text-gray-600 space-y-2 list-disc list-inside">
                                     <li>Penguasaan Pedagogy & Content Knowledge (TPACK)</li>
                                     <li>Keterampilan Asesmen Berkelanjutan (Formatif & Sumatif)</li>
@@ -645,11 +445,8 @@
                                     <li>Keahlian Komunikasi Empatik dengan Siswa & Orang Tua</li>
                                 </ul>
                             </div>
-
                             <div class="bg-pink-50/40 border border-pink-100 rounded-2xl p-5 space-y-3">
-                                <h4 class="font-bold text-pink-700 text-base flex items-center gap-2">
-                                    💖 Karakter Pendidik Profesional
-                                </h4>
+                                <h4 class="font-bold text-pink-700 text-base flex items-center gap-2">💖 Karakter Pendidik Profesional</h4>
                                 <ul class="text-xs md:text-sm text-gray-600 space-y-2 list-disc list-inside">
                                     <li>Integritas & Dedikasi Tinggi terhadap Profesi</li>
                                     <li>Resiliensi & Berpikir Terbuka terhadap Evaluasi</li>
@@ -669,7 +466,6 @@
                         <div class="flex-grow h-px bg-pink-100"></div>
                     </div>
 
-                    <!-- 1. Refleksi Pengalaman Belajar -->
                     <div id="refleksi-pengalaman" class="bg-white border border-pink-100 rounded-3xl p-6 md:p-8 shadow-xs space-y-8 hover:border-pink-200 transition">
                         <div class="flex items-center gap-3 border-b border-pink-100 pb-4">
                             <span class="w-8 h-8 bg-pink-100 text-pink-600 rounded-xl flex items-center justify-center font-bold text-sm">1</span>
@@ -678,41 +474,22 @@
                                 <p class="text-xs text-gray-500">Evaluasi Diri Pembelajaran Tahapan PPL Terbimbing</p>
                             </div>
                         </div>
-
                         <div class="space-y-6">
-                            <!-- Aspect 1 -->
                             <div class="bg-pink-50/40 border border-pink-100 rounded-2xl p-5 md:p-6 space-y-3">
-                                <h4 class="text-pink-700 font-bold text-base flex items-center gap-2">
-                                    🎓 Pembelajaran Selama Tahapan PPL Terbimbing (Awal hingga Akhir)
-                                </h4>
-                                <p class="text-xs md:text-sm text-gray-600 leading-relaxed text-justify">
-                                    Selama menempuh PPL Terbimbing dari tahap observasi, asistensi mengajar, hingga praktik pembelajaran mandiri terbimbing sebanyak 3 siklus, saya mempelajari secara mendalam bagaimana menterjemahkan teori pedagogi ke dalam aksi nyata di kelas. Saya memahami pentingnya pemetaan profil belajar peserta didik, penyusunan rancangan pembelajaran berdiferensiasi, pengelolaan kelas yang responsif, serta pentingnya asesmen autentik untuk mengukur ketercapaian belajar secara adil.
-                                </p>
+                                <h4 class="text-pink-700 font-bold text-base flex items-center gap-2">🎓 Pembelajaran Selama Tahapan PPL Terbimbing (Awal hingga Akhir)</h4>
+                                <p class="text-xs md:text-sm text-gray-600 leading-relaxed text-justify">Selama menempuh PPL Terbimbing dari tahap observasi, asistensi mengajar, hingga praktik pembelajaran mandiri terbimbing sebanyak 3 siklus, saya mempelajari secara mendalam bagaimana menterjemahkan teori pedagogi ke dalam aksi nyata di kelas. Saya memahami pentingnya pemetaan profil belajar peserta didik, penyusunan rancangan pembelajaran berdiferensiasi, pengelolaan kelas yang responsif, serta pentingnya asesmen autentik untuk mengukur ketercapaian belajar secara adil.</p>
                             </div>
-
-                            <!-- Aspect 2 -->
                             <div class="bg-pink-50/40 border border-pink-100 rounded-2xl p-5 md:p-6 space-y-3">
-                                <h4 class="text-pink-700 font-bold text-base flex items-center gap-2">
-                                    ⚡ Pengalaman Menantang & Solusi
-                                </h4>
-                                <p class="text-xs md:text-sm text-gray-600 leading-relaxed text-justify">
-                                    Tantangan terbesar yang saya hadapi adalah mengelola keheterogenan konsentrasi dan pemahaman awal peserta didik saat pembelajaran berlangsung, serta estimasi waktu yang terkadang meleset dari RPP. Solusi yang saya terapkan adalah melakukan *ice breaking* terarah, memanfaatkan media visual interaktif untuk menarik atensi, serta fleksibilitas pengelompokan (*peer tutoring*) agar peserta didik yang lebih cepat paham dapat mendampingi temannya.
-                                </p>
+                                <h4 class="text-pink-700 font-bold text-base flex items-center gap-2">⚡ Pengalaman Menantang & Solusi</h4>
+                                <p class="text-xs md:text-sm text-gray-600 leading-relaxed text-justify">Tantangan terbesar yang saya hadapi adalah mengelola keheterogenan konsentrasi dan pemahaman awal peserta didik saat pembelajaran berlangsung, serta estimasi waktu yang terkadang meleset dari RPP. Solusi yang saya terapkan adalah melakukan *ice breaking* terarah, memanfaatkan media visual interaktif untuk menarik atensi, serta fleksibilitas pengelompokan (*peer tutoring*) agar peserta didik yang lebih cepat paham dapat mendampingi temannya.</p>
                             </div>
-
-                            <!-- Aspect 3 -->
                             <div class="bg-pink-50/40 border border-pink-100 rounded-2xl p-5 md:p-6 space-y-3">
-                                <h4 class="text-pink-700 font-bold text-base flex items-center gap-2">
-                                    💬 Umpan Balik & Saran Konstruktif Diskusi Refleksi Akhir
-                                </h4>
-                                <p class="text-xs md:text-sm text-gray-600 leading-relaxed text-justify">
-                                    Dalam diskusi refleksi bersama Dosen Pembimbing Lapangan dan Guru Pamong, saya menerima arahan konstruktif untuk lebih mempertegas penguatan motivasi di awal pembelajaran, serta melatih efisiensi alokasi waktu pada sesi penutup/refleksi siswa. Umpan balik ini menjadi pijakan berharga bagi saya untuk meningkatkan kemandirian dan kematangan mengajar pada tahap PPL Mandiri mendatang.
-                                </p>
+                                <h4 class="text-pink-700 font-bold text-base flex items-center gap-2">💬 Umpan Balik & Saran Konstruktif Diskusi Refleksi Akhir</h4>
+                                <p class="text-xs md:text-sm text-gray-600 leading-relaxed text-justify">Dalam diskusi refleksi bersama Dosen Pembimbing Lapangan dan Guru Pamong, saya menerima arahan konstruktif untuk lebih mempertegas penguatan motivasi di awal pembelajaran, serta melatih efisiensi alokasi waktu pada sesi penutup/refleksi siswa. Umpan balik ini menjadi pijakan berharga bagi saya untuk meningkatkan kemandirian dan kematangan mengajar pada tahap PPL Mandiri mendatang.</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- 2. Filosofi Mengajar -->
                     <div id="filosofi-mengajar" class="bg-white border border-pink-100 rounded-3xl p-6 md:p-8 shadow-xs space-y-6 hover:border-pink-200 transition">
                         <div class="flex items-center gap-3 border-b border-pink-100 pb-4">
                             <span class="w-8 h-8 bg-pink-100 text-pink-600 rounded-xl flex items-center justify-center font-bold text-sm">2</span>
@@ -721,29 +498,18 @@
                                 <p class="text-xs text-gray-500">Ideologi Perjalanan Pendidik Profesional</p>
                             </div>
                         </div>
-
                         <div class="space-y-4 text-xs md:text-sm text-gray-600 leading-relaxed text-justify">
-                            <p class="bg-pink-50/30 p-5 rounded-2xl border border-pink-100">
-                                Filosofi mengajar saya berakar kuat pada pemikiran humanistik Ki Hajar Dewantara, yang menegaskan bahwa pendidikan adalah proses "menuntun segala kekuatan kodrat yang ada pada anak-anak agar mereka dapat mencapai keselamatan dan kebahagiaan yang setinggi-tingginya". Melalui pengalaman observasi dan asistensi pada PPL Terbimbing, saya menyadari bahwa setiap siswa hadir di kelas dengan latar belakang, minat, dan kecepatan belajar yang beragam. Oleh karena itu, tugas utama saya sebagai pendidik bukanlah memaksakan kehendak atau menyeragamkan pemahaman, melainkan menyediakan taman belajar yang subur tempat setiap benih potensi peserta didik dapat tumbuh berkembang secara optimal.
-                            </p>
-
-                            <p class="bg-pink-50/30 p-5 rounded-2xl border border-pink-100">
-                                Berlandaskan paradigma Konstruktivisme (Vygotsky & Piaget), saya percaya bahwa pengetahuan dibangun secara aktif oleh peserta didik melalui pengalaman belajar langsung dan interaksi sosial yang bermakna. Integrasi konsep *Technological Pedagogical Content Knowledge* (TPACK) serta pendekatan *Differentiated Instruction* menjadi fondasi strategis saya dalam merancang pembelajaran. Pembelajaran hendaknya tidak lagi berpusat pada guru (*teacher-centered*), melainkan menempatkan siswa sebagai subjek utama yang aktif mengeksplorasi, menganalisis, dan memecahkan masalah (*Problem-Based Learning*).
-                            </p>
-
-                            <p class="bg-pink-50/30 p-5 rounded-2xl border border-pink-100">
-                                Komitmen mendasar yang menjadi ideologi profesi saya adalah menjadi pendidik yang memiliki *Critical Reflective Practice* (Donald Schön). Saya meyakini bahwa seorang guru profesional tidak pernah berhenti belajar. Pengalaman selama PPL Terbimbing mengajarkan saya untuk senantiasa mengevaluasi diri, mendengarkan umpan balik dari peserta didik maupun kolega, serta adaptif terhadap dinamika perkembangan zaman. Dengan memegang teguh nilai ketulusan, kepedulian, dan profesionalisme, saya siap mendedikasikan diri untuk membimbing generasi muda Indonesia.
-                            </p>
+                            <p class="bg-pink-50/30 p-5 rounded-2xl border border-pink-100">Filosofi mengajar saya berakar kuat pada pemikiran humanistik Ki Hajar Dewantara, yang menegaskan bahwa pendidikan adalah proses "menuntun segala kekuatan kodrat yang ada pada anak-anak agar mereka dapat mencapai keselamatan dan kebahagiaan yang setinggi-tingginya". Melalui pengalaman observasi dan asistensi pada PPL Terbimbing, saya menyadari bahwa setiap siswa hadir di kelas dengan latar belakang, minat, dan kecepatan belajar yang beragam. Oleh karena itu, tugas utama saya sebagai pendidik bukanlah memaksakan kehendak atau menyeragamkan pemahaman, melainkan menyediakan taman belajar yang subur tempat setiap benih potensi peserta didik dapat tumbuh berkembang secara optimal.</p>
+                            <p class="bg-pink-50/30 p-5 rounded-2xl border border-pink-100">Berlandaskan paradigma Konstruktivisme (Vygotsky & Piaget), saya percaya bahwa pengetahuan dibangun secara aktif oleh peserta didik melalui pengalaman belajar langsung dan interaksi sosial yang bermakna. Integrasi konsep *Technological Pedagogical Content Knowledge* (TPACK) serta pendekatan *Differentiated Instruction* menjadi fondasi strategis saya dalam merancang pembelajaran. Pembelajaran hendaknya tidak lagi berpusat pada guru (*teacher-centered*), melainkan menempatkan siswa sebagai subjek utama yang aktif mengeksplorasi, menganalisis, dan memecahkan masalah (*Problem-Based Learning*).</p>
+                            <p class="bg-pink-50/30 p-5 rounded-2xl border border-pink-100">Komitmen mendasar yang menjadi ideologi profesi saya adalah menjadi pendidik yang memiliki *Critical Reflective Practice* (Donald Schön). Saya meyakini bahwa seorang guru profesional tidak pernah berhenti belajar. Pengalaman selama PPL Terbimbing mengajarkan saya untuk senantiasa mengevaluasi diri, mendengarkan umpan balik dari peserta didik maupun kolega, serta adaptif terhadap dinamika perkembangan zaman. Dengan memegang teguh nilai ketulusan, kepedulian, dan profesionalisme, saya siap mendedikasikan diri untuk membimbing generasi muda Indonesia.</p>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
 
         <!-- HALAMAN PPL MANDIRI -->
         <div id="page-ppl-mandiri" class="page-content hidden">
-            <!-- Header Section PPL Mandiri -->
             <section class="bg-gradient-to-b from-rose-100/50 via-pink-50/30 to-white py-12 border-b border-pink-100">
                 <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
                     <div>
@@ -751,33 +517,47 @@
                         <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 mt-2">PPL Mandiri</h1>
                         <p class="text-gray-600 mt-1">Kumpulan E-Portofolio 1 & 2 selama pelaksanaan PPL Mandiri</p>
                     </div>
-
-                    <!-- Dropdown Mandiri -->
                     <div class="relative w-full md:w-auto">
-                        <button onclick="toggleEportMenuMandiri()" class="w-full md:w-auto flex items-center justify-between gap-3 px-5 py-3 bg-white border border-pink-200 rounded-2xl shadow-sm hover:border-pink-300 text-pink-700 font-semibold cursor-pointer">
+                        <button onclick="toggleEportMenuMandiri()" class="w-full md:w-auto flex items-center justify-between gap-3 px-5 py-3 bg-white border border-pink-200 rounded-2xl shadow-sm hover:border-pink-300 hover:shadow-md text-pink-700 font-semibold cursor-pointer transition-all">
                             <span class="flex items-center gap-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
                                 Navigasi E-Portofolio Mandiri
                             </span>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform duration-200" id="menu-arrow-mandiri" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform duration-200" id="menu-arrow-mandiri" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
                         </button>
-
-                        <div id="eport-dropdown-mandiri" class="hidden absolute right-0 mt-2 w-full md:w-72 bg-white rounded-2xl shadow-xl border border-pink-100 z-30 p-3 space-y-3">
-                            <div>
-                                <div class="px-3 py-1 text-xs font-bold text-pink-500 uppercase tracking-wider">E-Portofolio 1</div>
-                                <div class="mt-1 space-y-1">
-                                    <a href="#m-analisis-artefak" onclick="closeEportMenuMandiri()" class="block px-3 py-2 text-sm text-gray-700 hover:bg-pink-50 hover:text-pink-600 rounded-xl transition">1. Analisis Artefak (Siklus 1)</a>
-                                </div>
+                        <!-- DROPDOWN NAVIGASI MANDIRI (versi baru) -->
+                        <div id="eport-dropdown-mandiri" class="hidden absolute right-0 mt-3 w-full md:w-80 z-30 rounded-2xl shadow-2xl border border-pink-100 overflow-hidden bg-white animate-dropdown">
+                            <div class="bg-gradient-to-r from-rose-500 via-rose-500 to-pink-400 px-4 py-3 flex items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" /></svg>
+                                <span class="text-white font-bold text-sm tracking-wide">Daftar E-Portofolio Mandiri</span>
                             </div>
-                            <hr class="border-pink-100">
-                            <div>
-                                <div class="px-3 py-1 text-xs font-bold text-pink-500 uppercase tracking-wider">E-Portofolio 2</div>
-                                <div class="mt-1 space-y-1">
-                                    <a href="#m-analisis-artefak-2" onclick="closeEportMenuMandiri()" class="block px-3 py-2 text-sm text-gray-700 hover:bg-pink-50 hover:text-pink-600 rounded-xl transition">1. Analisis Artefak (Siklus 2, 3, 4)</a>
+                            <div class="p-3 space-y-3">
+                                <div>
+                                    <div class="px-2 py-1.5 flex items-center gap-2">
+                                        <span class="w-6 h-6 rounded-lg bg-gradient-to-br from-rose-500 to-pink-400 text-white flex items-center justify-center text-xs font-bold shadow-sm">1</span>
+                                        <span class="text-xs font-bold text-rose-500 uppercase tracking-wider">E-Portofolio 1</span>
+                                    </div>
+                                    <div class="mt-1 space-y-1">
+                                        <a href="#m-analisis-artefak" onclick="closeEportMenuMandiri()" class="group flex items-center gap-3 px-3 py-2.5 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-rose-50 hover:to-pink-50 hover:text-rose-700 rounded-xl transition-all">
+                                            <span class="w-8 h-8 rounded-lg bg-rose-50 group-hover:bg-rose-500 text-rose-600 group-hover:text-white flex items-center justify-center text-base transition-all shadow-2xs">📄</span>
+                                            <span class="font-medium">Analisis Artefak (Siklus 1)</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-auto text-gray-300 group-hover:text-rose-500 group-hover:translate-x-1 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="h-px bg-gradient-to-r from-transparent via-rose-200 to-transparent"></div>
+                                <div>
+                                    <div class="px-2 py-1.5 flex items-center gap-2">
+                                        <span class="w-6 h-6 rounded-lg bg-gradient-to-br from-rose-600 to-pink-500 text-white flex items-center justify-center text-xs font-bold shadow-sm">2</span>
+                                        <span class="text-xs font-bold text-rose-500 uppercase tracking-wider">E-Portofolio 2</span>
+                                    </div>
+                                    <div class="mt-1 space-y-1">
+                                        <a href="#m-analisis-artefak-2" onclick="closeEportMenuMandiri()" class="group flex items-center gap-3 px-3 py-2.5 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-rose-50 hover:to-pink-50 hover:text-rose-700 rounded-xl transition-all">
+                                            <span class="w-8 h-8 rounded-lg bg-rose-50 group-hover:bg-rose-500 text-rose-600 group-hover:text-white flex items-center justify-center text-base transition-all shadow-2xs">📄</span>
+                                            <span class="font-medium">Analisis Artefak (Siklus 2, 3, 4)</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-auto text-gray-300 group-hover:text-rose-500 group-hover:translate-x-1 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -785,10 +565,8 @@
                 </div>
             </section>
 
-            <!-- Isi Halaman PPL Mandiri -->
             <div class="max-w-5xl mx-auto px-6 py-12 space-y-16">
-                
-                <!-- E-PORTOFOLIO 1 (MANDIRI) -->
+                <!-- E-PORTOFOLIO 1 MANDIRI -->
                 <div class="space-y-8">
                     <div class="flex items-center gap-4">
                         <span class="px-4 py-1.5 bg-rose-500 text-white font-bold text-sm rounded-full">BAGIAN 1</span>
@@ -796,38 +574,23 @@
                         <div class="flex-grow h-px bg-pink-100"></div>
                     </div>
 
-                    <!-- 1. Analisis Artefak Mandiri (E-Portofolio 1 - Siklus 1) -->
                     <div id="m-analisis-artefak" class="bg-white border border-pink-100 rounded-3xl p-6 md:p-8 shadow-xs space-y-6 hover:border-pink-200 transition">
                         <div class="flex items-center gap-3">
                             <span class="w-8 h-8 bg-rose-100 text-rose-600 rounded-xl flex items-center justify-center font-bold text-sm">1</span>
                             <h3 class="text-xl font-bold text-gray-800">Analisis Artefak (Siklus 1)</h3>
                         </div>
 
-                        <!-- Menu Tab Artefak Mandiri E-Portofolio 1 -->
                         <div class="flex flex-wrap gap-2 border-b border-gray-200 pb-3">
-                            <button onclick="switchArtefakTabMandiri('modul-ajar')" id="m-tab-modul-ajar" class="m-artefak-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer bg-rose-600 text-white shadow-xs">
-                                📖 Modul Ajar / RPP
-                            </button>
-                            <button onclick="switchArtefakTabMandiri('media-pembelajaran')" id="m-tab-media-pembelajaran" class="m-artefak-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer text-gray-600 hover:text-rose-600 hover:bg-pink-50">
-                                🖼️ Media Pembelajaran
-                            </button>
-                            <button onclick="switchArtefakTabMandiri('lkpd')" id="m-tab-lkpd" class="m-artefak-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer text-gray-600 hover:text-rose-600 hover:bg-pink-50">
-                                📋 LKPD
-                            </button>
-                            <button onclick="switchArtefakTabMandiri('instrumen-asesmen')" id="m-tab-instrumen-asesmen" class="m-artefak-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer text-gray-600 hover:text-rose-600 hover:bg-pink-50">
-                                📑 Instrumen Asesmen
-                            </button>
-                            <button onclick="switchArtefakTabMandiri('dokumentasi')" id="m-tab-dokumentasi" class="m-artefak-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer text-gray-600 hover:text-rose-600 hover:bg-pink-50">
-                                📷 Dokumentasi
-                            </button>
+                            <button onclick="switchArtefakTabMandiri('modul-ajar')" id="m-tab-modul-ajar" class="m-artefak-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer bg-rose-600 text-white shadow-xs">📖 Modul Ajar / RPP</button>
+                            <button onclick="switchArtefakTabMandiri('media-pembelajaran')" id="m-tab-media-pembelajaran" class="m-artefak-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer text-gray-600 hover:text-rose-600 hover:bg-pink-50">🖼️ Media Pembelajaran</button>
+                            <button onclick="switchArtefakTabMandiri('lkpd')" id="m-tab-lkpd" class="m-artefak-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer text-gray-600 hover:text-rose-600 hover:bg-pink-50">📋 LKPD</button>
+                            <button onclick="switchArtefakTabMandiri('instrumen-asesmen')" id="m-tab-instrumen-asesmen" class="m-artefak-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer text-gray-600 hover:text-rose-600 hover:bg-pink-50">📑 Instrumen Asesmen</button>
+                            <button onclick="switchArtefakTabMandiri('dokumentasi')" id="m-tab-dokumentasi" class="m-artefak-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer text-gray-600 hover:text-rose-600 hover:bg-pink-50">📷 Dokumentasi</button>
                         </div>
 
-                        <!-- Konten Dinamis Mandiri (Siklus 1) -->
                         <div class="bg-rose-50/30 border border-pink-100 rounded-2xl p-6 space-y-6">
                             <div class="flex items-center justify-between border-b border-pink-100 pb-3">
-                                <h4 id="m-artefak-title" class="font-bold text-gray-800 text-lg flex items-center gap-2">
-                                    📖 Modul Ajar / RPP (Mandiri)
-                                </h4>
+                                <h4 id="m-artefak-title" class="font-bold text-gray-800 text-lg flex items-center gap-2">📖 Modul Ajar / RPP (Mandiri)</h4>
                                 <span class="text-xs bg-rose-100 text-rose-700 px-3 py-1 rounded-full font-medium">Analisis Mandiri Siklus 1</span>
                             </div>
 
@@ -850,35 +613,25 @@
                                 </div>
                             </div>
 
-                            <!-- PDF VIEWER MANDIRI (SIKLUS 1 ONLY) -->
                             <div class="pt-6 border-t border-pink-100 space-y-6">
                                 <div class="border-b-2 border-rose-500 pb-2 inline-block">
-                                    <h4 class="text-lg font-bold text-gray-800 flex items-center gap-2">
-                                        📄 Pratinjau Dokumen (Siklus 1 Mandiri)
-                                    </h4>
+                                    <h4 class="text-lg font-bold text-gray-800 flex items-center gap-2">📄 Pratinjau Dokumen (Siklus 1 Mandiri)</h4>
                                 </div>
-
                                 <div class="bg-gray-50 border border-pink-100 rounded-2xl overflow-hidden shadow-xs">
                                     <div class="bg-gray-100/80 px-5 py-3 border-b border-gray-200 flex items-center justify-between">
-                                        <span id="m-pdf-doc-title" class="font-bold text-gray-700 text-sm">
-                                            Modul Ajar Mandiri Siklus 1
-                                        </span>
-                                        <a id="m-pdf-download-link" href="https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/view?usp=sharing" target="_blank" class="text-xs font-semibold text-rose-600 hover:text-rose-800 hover:underline flex items-center gap-1">
-                                            <span>Buka PDF di Google Drive</span> ↗
-                                        </a>
+                                        <span id="m-pdf-doc-title" class="font-bold text-gray-700 text-sm">Modul Ajar Mandiri Siklus 1</span>
+                                        <a id="m-pdf-download-link" href="https://drive.google.com/file/d/1aOmvfEOC7LJ-exv6DdGKQdCNJuaA-7nf/view?usp=sharing" target="_blank" class="text-xs font-semibold text-rose-600 hover:text-rose-800 hover:underline flex items-center gap-1"><span>Buka PDF di Google Drive</span> ↗</a>
                                     </div>
-
                                     <div class="w-full h-96 md:h-[480px] bg-gray-200 relative">
-                                        <iframe id="m-pdf-frame" src="https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/preview" class="w-full h-full border-none" title="Pratinjau Dokumen PDF Google Drive Mandiri" allow="autoplay"></iframe>
+                                        <iframe id="m-pdf-frame" src="https://drive.google.com/file/d/1aOmvfEOC7LJ-exv6DdGKQdCNJuaA-7nf/preview" class="w-full h-full border-none" title="Pratinjau Dokumen PDF Google Drive Mandiri" allow="autoplay"></iframe>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
 
-                <!-- E-PORTOFOLIO 2 (MANDIRI) -->
+                <!-- E-PORTOFOLIO 2 MANDIRI -->
                 <div class="space-y-8 pt-6">
                     <div class="flex items-center gap-4">
                         <span class="px-4 py-1.5 bg-rose-600 text-white font-bold text-sm rounded-full">BAGIAN 2</span>
@@ -886,38 +639,23 @@
                         <div class="flex-grow h-px bg-pink-100"></div>
                     </div>
 
-                    <!-- 1. Analisis Artefak Mandiri E-Portofolio 2 (Siklus 2, 3, 4) -->
                     <div id="m-analisis-artefak-2" class="bg-white border border-pink-100 rounded-3xl p-6 md:p-8 shadow-xs space-y-6 hover:border-pink-200 transition">
                         <div class="flex items-center gap-3">
                             <span class="w-8 h-8 bg-rose-100 text-rose-600 rounded-xl flex items-center justify-center font-bold text-sm">1</span>
                             <h3 class="text-xl font-bold text-gray-800">Analisis Artefak (Siklus 2, Siklus 3, Siklus 4)</h3>
                         </div>
 
-                        <!-- Menu Tab Artefak Mandiri E-Portofolio 2 -->
                         <div class="flex flex-wrap gap-2 border-b border-gray-200 pb-3">
-                            <button onclick="switchArtefakTabMandiriEport2('modul-ajar')" id="m2-tab-modul-ajar" class="m2-artefak-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer bg-rose-600 text-white shadow-xs">
-                                📖 Modul Ajar / RPP
-                            </button>
-                            <button onclick="switchArtefakTabMandiriEport2('media-pembelajaran')" id="m2-tab-media-pembelajaran" class="m2-artefak-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer text-gray-600 hover:text-rose-600 hover:bg-pink-50">
-                                🖼️ Media Pembelajaran
-                            </button>
-                            <button onclick="switchArtefakTabMandiriEport2('lkpd')" id="m2-tab-lkpd" class="m2-artefak-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer text-gray-600 hover:text-rose-600 hover:bg-pink-50">
-                                📋 LKPD
-                            </button>
-                            <button onclick="switchArtefakTabMandiriEport2('instrumen-asesmen')" id="m2-tab-instrumen-asesmen" class="m2-artefak-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer text-gray-600 hover:text-rose-600 hover:bg-pink-50">
-                                📑 Instrumen Asesmen
-                            </button>
-                            <button onclick="switchArtefakTabMandiriEport2('dokumentasi')" id="m2-tab-dokumentasi" class="m2-artefak-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer text-gray-600 hover:text-rose-600 hover:bg-pink-50">
-                                📷 Dokumentasi
-                            </button>
+                            <button onclick="switchArtefakTabMandiriEport2('modul-ajar')" id="m2-tab-modul-ajar" class="m2-artefak-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer bg-rose-600 text-white shadow-xs">📖 Modul Ajar / RPP</button>
+                            <button onclick="switchArtefakTabMandiriEport2('media-pembelajaran')" id="m2-tab-media-pembelajaran" class="m2-artefak-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer text-gray-600 hover:text-rose-600 hover:bg-pink-50">🖼️ Media Pembelajaran</button>
+                            <button onclick="switchArtefakTabMandiriEport2('lkpd')" id="m2-tab-lkpd" class="m2-artefak-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer text-gray-600 hover:text-rose-600 hover:bg-pink-50">📋 LKPD</button>
+                            <button onclick="switchArtefakTabMandiriEport2('instrumen-asesmen')" id="m2-tab-instrumen-asesmen" class="m2-artefak-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer text-gray-600 hover:text-rose-600 hover:bg-pink-50">📑 Instrumen Asesmen</button>
+                            <button onclick="switchArtefakTabMandiriEport2('dokumentasi')" id="m2-tab-dokumentasi" class="m2-artefak-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer text-gray-600 hover:text-rose-600 hover:bg-pink-50">📷 Dokumentasi</button>
                         </div>
 
-                        <!-- Konten Dinamis E-Portofolio 2 Mandiri -->
                         <div class="bg-rose-50/30 border border-pink-100 rounded-2xl p-6 space-y-6">
                             <div class="flex items-center justify-between border-b border-pink-100 pb-3">
-                                <h4 id="m2-artefak-title" class="font-bold text-gray-800 text-lg flex items-center gap-2">
-                                    📖 Modul Ajar / RPP (Mandiri)
-                                </h4>
+                                <h4 id="m2-artefak-title" class="font-bold text-gray-800 text-lg flex items-center gap-2">📖 Modul Ajar / RPP (Mandiri)</h4>
                                 <span class="text-xs bg-rose-100 text-rose-700 px-3 py-1 rounded-full font-medium">Analisis Mandiri Siklus 2 - 4</span>
                             </div>
 
@@ -940,52 +678,33 @@
                                 </div>
                             </div>
 
-                            <!-- SUBSECTION: PRATINJAU DOKUMEN PER SIKLUS (SIKLUS 2, 3, 4) -->
                             <div class="pt-6 border-t border-pink-100 space-y-6">
                                 <div class="border-b-2 border-rose-500 pb-2 inline-block">
-                                    <h4 class="text-lg font-bold text-gray-800 flex items-center gap-2">
-                                        📄 Pratinjau Dokumen per Siklus
-                                    </h4>
+                                    <h4 class="text-lg font-bold text-gray-800 flex items-center gap-2">📄 Pratinjau Dokumen per Siklus</h4>
                                 </div>
-
                                 <div class="flex items-center gap-2 border-b border-gray-100 pb-3">
-                                    <button onclick="switchSiklusTabMandiriEport2('siklus-2')" id="m2-tab-s-siklus-2" class="m2-siklus-tab px-5 py-2 rounded-xl text-sm font-semibold transition cursor-pointer bg-white text-rose-600 border border-pink-200 shadow-xs">
-                                        Siklus 2
-                                    </button>
-                                    <button onclick="switchSiklusTabMandiriEport2('siklus-3')" id="m2-tab-s-siklus-3" class="m2-siklus-tab px-5 py-2 rounded-xl text-sm font-medium transition cursor-pointer text-gray-600 hover:text-rose-600 hover:bg-pink-50">
-                                        Siklus 3
-                                    </button>
-                                    <button onclick="switchSiklusTabMandiriEport2('siklus-4')" id="m2-tab-s-siklus-4" class="m2-siklus-tab px-5 py-2 rounded-xl text-sm font-medium transition cursor-pointer text-gray-600 hover:text-rose-600 hover:bg-pink-50">
-                                        Siklus 4
-                                    </button>
+                                    <button onclick="switchSiklusTabMandiriEport2('siklus-2')" id="m2-tab-s-siklus-2" class="m2-siklus-tab px-5 py-2 rounded-xl text-sm font-semibold transition cursor-pointer bg-white text-rose-600 border border-pink-200 shadow-xs">Siklus 2</button>
+                                    <button onclick="switchSiklusTabMandiriEport2('siklus-3')" id="m2-tab-s-siklus-3" class="m2-siklus-tab px-5 py-2 rounded-xl text-sm font-medium transition cursor-pointer text-gray-600 hover:text-rose-600 hover:bg-pink-50">Siklus 3</button>
+                                    <button onclick="switchSiklusTabMandiriEport2('siklus-4')" id="m2-tab-s-siklus-4" class="m2-siklus-tab px-5 py-2 rounded-xl text-sm font-medium transition cursor-pointer text-gray-600 hover:text-rose-600 hover:bg-pink-50">Siklus 4</button>
                                 </div>
-
                                 <div class="bg-gray-50 border border-pink-100 rounded-2xl overflow-hidden shadow-xs">
                                     <div class="bg-gray-100/80 px-5 py-3 border-b border-gray-200 flex items-center justify-between">
-                                        <span id="m2-pdf-doc-title" class="font-bold text-gray-700 text-sm">
-                                            Modul Ajar Siklus 2 Mandiri
-                                        </span>
-                                        <a id="m2-pdf-download-link" href="https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/view?usp=sharing" target="_blank" class="text-xs font-semibold text-rose-600 hover:text-rose-800 hover:underline flex items-center gap-1">
-                                            <span>Buka PDF di Google Drive</span> ↗
-                                        </a>
+                                        <span id="m2-pdf-doc-title" class="font-bold text-gray-700 text-sm">Modul Ajar Siklus 2 Mandiri</span>
+                                        <a id="m2-pdf-download-link" href="https://drive.google.com/file/d/1aOmvfEOC7LJ-exv6DdGKQdCNJuaA-7nf/view?usp=sharing" target="_blank" class="text-xs font-semibold text-rose-600 hover:text-rose-800 hover:underline flex items-center gap-1"><span>Buka PDF di Google Drive</span> ↗</a>
                                     </div>
-
                                     <div class="w-full h-96 md:h-[480px] bg-gray-200 relative">
-                                        <iframe id="m2-pdf-frame" src="https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/preview" class="w-full h-full border-none" title="Pratinjau Dokumen PDF Google Drive Mandiri Eport 2" allow="autoplay"></iframe>
+                                        <iframe id="m2-pdf-frame" src="https://drive.google.com/file/d/1aOmvfEOC7LJ-exv6DdGKQdCNJuaA-7nf/preview" class="w-full h-full border-none" title="Pratinjau Dokumen PDF Google Drive Mandiri Eport 2" allow="autoplay"></iframe>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
-
             </div>
         </div>
 
     </main>
 
-    <!-- FOOTER -->
     <footer class="bg-white border-t border-pink-100 py-8 text-center text-sm text-gray-500">
         <div class="max-w-6xl mx-auto px-6 space-y-2">
             <p class="font-medium text-gray-700">Portofolio Praktik Pengalaman Lapangan (PPL) — PPG Prajabatan</p>
@@ -993,32 +712,20 @@
         </div>
     </footer>
 
-    <!-- JAVASCRIPT LOGIC -->
     <script>
-        // Theme Switcher Logic (Icon Only & Navy Palette)
         function toggleTheme() {
             const body = document.body;
             const themeIcon = document.getElementById('theme-icon');
-
             body.classList.toggle('dark-mode');
-
-            if (body.classList.contains('dark-mode')) {
-                themeIcon.innerText = '☀️';
-                localStorage.setItem('theme', 'dark');
-            } else {
-                themeIcon.innerText = '🌙';
-                localStorage.setItem('theme', 'light');
-            }
+            if (body.classList.contains('dark-mode')) { themeIcon.innerText = '☀️'; localStorage.setItem('theme', 'dark'); }
+            else { themeIcon.innerText = '🌙'; localStorage.setItem('theme', 'light'); }
         }
-
-        // Check local storage preference on load
         if (localStorage.getItem('theme') === 'dark') {
             document.body.classList.add('dark-mode');
             const themeIcon = document.getElementById('theme-icon');
             if (themeIcon) themeIcon.innerText = '☀️';
         }
 
-        // Data Artefak PPL Terbimbing
         const artefakData = {
             'modul-ajar': {
                 title: '📖 Modul Ajar / RPP',
@@ -1027,9 +734,9 @@
                 keberhasilan: 'Perencanaan langkah pembelajaran yang terstruktur, kejelasan tujuan pembelajaran, serta arahan bimbingan reflektif dari Guru Pamong.',
                 adaptasi: 'Pengelompokan siswa secara dinamis berdasarkan kesiapan belajar serta fleksibilitas tempo pengerjaan tugas LKPD.',
                 pdfDocs: {
-                    'siklus-1': { title: 'Modul Ajar Siklus 1 - Hak Kekayaan Intelektual', previewUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/preview', downloadUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/view?usp=sharing' },
-                    'siklus-2': { title: 'Modul Ajar Siklus 2 - Etika & Budaya Digital', previewUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/preview', downloadUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/view?usp=sharing' },
-                    'siklus-3': { title: 'Modul Ajar Siklus 3 - Keamanan Siber Dasar', previewUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/preview', downloadUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/view?usp=sharing' },
+                    'siklus-1': { title: 'Modul Ajar Siklus 1 - Hak Kekayaan Intelektual', previewUrl: 'https://drive.google.com/file/d/1aOmvfEOC7LJ-exv6DdGKQdCNJuaA-7nf/preview', downloadUrl: 'https://drive.google.com/file/d/1aOmvfEOC7LJ-exv6DdGKQdCNJuaA-7nf/view?usp=sharing' },
+                    'siklus-2': { title: 'Modul Ajar Siklus 2 - Etika & Budaya Digital', previewUrl: 'https://drive.google.com/file/d/1aOmvfEOC7LJ-exv6DdGKQdCNJuaA-7nf/preview', downloadUrl: 'https://drive.google.com/file/d/1aOmvfEOC7LJ-exv6DdGKQdCNJuaA-7nf/view?usp=sharing' },
+                    'siklus-3': { title: 'Modul Ajar Siklus 3 - Keamanan Siber Dasar', previewUrl: 'https://drive.google.com/file/d/18kwfyacXWgOHGzifhQ86ZFCiNv44_Tk3/preview', downloadUrl: 'https://drive.google.com/file/d/18kwfyacXWgOHGzifhQ86ZFCiNv44_Tk3/view?usp=sharing' },
                     'siklus-4': { title: 'Modul Ajar Siklus 4 - Literasi Digital Lanjutan', previewUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/preview', downloadUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/view?usp=sharing' }
                 }
             },
@@ -1040,9 +747,9 @@
                 keberhasilan: 'Visualisasi grafik yang menarik mampu meningkatkan fokus atensi dan motivasi belajar siswa hingga 90%.',
                 adaptasi: 'Menyediakan versi cetak/offline dari presentasi interaktif sebagai antisipasi pemadaman atau kendala koneksi.',
                 pdfDocs: {
-                    'siklus-1': { title: 'Media Pembelajaran Siklus 1', previewUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/preview', downloadUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/view?usp=sharing' },
-                    'siklus-2': { title: 'Media Pembelajaran Siklus 2', previewUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/preview', downloadUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/view?usp=sharing' },
-                    'siklus-3': { title: 'Media Pembelajaran Siklus 3', previewUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/preview', downloadUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/view?usp=sharing' },
+                    'siklus-1': { title: 'Media Pembelajaran Siklus 1', previewUrl: 'https://drive.google.com/file/d/15tt4KlJddMB3Dpy97_8OXeox8z4sjkNe/preview', downloadUrl: 'https://drive.google.com/file/d/15tt4KlJddMB3Dpy97_8OXeox8z4sjkNe/view?usp=sharing' },
+                    'siklus-2': { title: 'Media Pembelajaran Siklus 2', previewUrl: 'https://drive.google.com/file/d/1l2xHwKOTktHqDCz4nXSOlFu-yn5-evQq/preview', downloadUrl: 'https://drive.google.com/file/d/1l2xHwKOTktHqDCz4nXSOlFu-yn5-evQq/view?usp=sharing' },
+                    'siklus-3': { title: 'Media Pembelajaran Siklus 3', previewUrl: 'https://drive.google.com/file/d/1tnLRj45Lo5Zx4zjqFV_G2E7irQ-MSiPI/preview', downloadUrl: 'https://drive.google.com/file/d/1tnLRj45Lo5Zx4zjqFV_G2E7irQ-MSiPI/view?usp=sharing' },
                     'siklus-4': { title: 'Media Pembelajaran Siklus 4', previewUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/preview', downloadUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/view?usp=sharing' }
                 }
             },
@@ -1053,9 +760,9 @@
                 keberhasilan: 'LKPD berbasis studi kasus nyata berhasil mendorong diskusi kritis antar anggota kelompok.',
                 adaptasi: 'Menambahkan petunjuk visual (ikon & flowchart) bagi siswa bertipe belajar visual.',
                 pdfDocs: {
-                    'siklus-1': { title: 'LKPD Siklus 1', previewUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/preview', downloadUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/view?usp=sharing' },
-                    'siklus-2': { title: 'LKPD Siklus 2', previewUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/preview', downloadUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/view?usp=sharing' },
-                    'siklus-3': { title: 'LKPD Siklus 3', previewUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/preview', downloadUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/view?usp=sharing' },
+                    'siklus-1': { title: 'LKPD Siklus 1', previewUrl: 'https://drive.google.com/file/d/1SkxPaRIX38qduTkNeOy2RMXXTRr1PKL6/preview', downloadUrl: 'https://drive.google.com/file/d/1SkxPaRIX38qduTkNeOy2RMXXTRr1PKL6/view?usp=sharing' },
+                    'siklus-2': { title: 'LKPD Siklus 2', previewUrl: 'https://drive.google.com/file/d/1XbmWmnoYOcSeKhbKkJMGDyexCEk72IWE/preview', downloadUrl: 'https://drive.google.com/file/d/1XbmWmnoYOcSeKhbKkJMGDyexCEk72IWE/view?usp=sharing' },
+                    'siklus-3': { title: 'LKPD Siklus 3', previewUrl: 'https://drive.google.com/file/d/1tzVzh2vH1UnLSD5QT5zxIvnRWV_pKOBC/preview', downloadUrl: 'https://drive.google.com/file/d/1tzVzh2vH1UnLSD5QT5zxIvnRWV_pKOBC/view?usp=sharing' },
                     'siklus-4': { title: 'LKPD Siklus 4', previewUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/preview', downloadUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/view?usp=sharing' }
                 }
             },
@@ -1066,94 +773,117 @@
                 keberhasilan: 'Kriteria rubrik yang transparan membantu siswa memahami ekspektasi tugas dengan jelas.',
                 adaptasi: 'Menggunakan format asesmen antarteman (*peer assessment*) yang lebih kontekstual.',
                 pdfDocs: {
-                    'siklus-1': { title: 'Instrumen Asesmen Siklus 1', previewUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/preview', downloadUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/view?usp=sharing' },
-                    'siklus-2': { title: 'Instrumen Asesmen Siklus 2', previewUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/preview', downloadUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/view?usp=sharing' },
-                    'siklus-3': { title: 'Instrumen Asesmen Siklus 3', previewUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/preview', downloadUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/view?usp=sharing' },
+                    'siklus-1': { title: 'Instrumen Asesmen Siklus 1', previewUrl: 'https://drive.google.com/file/d/10FLv0okHo5LmZhirfiEmoPGS-btrzz0v/preview', downloadUrl: 'https://drive.google.com/file/d/10FLv0okHo5LmZhirfiEmoPGS-btrzz0v/view?usp=sharing' },
+                    'siklus-2': { title: 'Instrumen Asesmen Siklus 2', previewUrl: 'https://drive.google.com/file/d/15fj-ZCpAKfnxhPEg58IQK4zRxmWR2Lwf/preview', downloadUrl: 'https://drive.google.com/file/d/15fj-ZCpAKfnxhPEg58IQK4zRxmWR2Lwf/view?usp=sharing' },
+                    'siklus-3': { title: 'Instrumen Asesmen Siklus 3', previewUrl: 'https://drive.google.com/file/d/1AuErNEdu8jDhhlXdcVxp4JhxHgk93VuN/preview', downloadUrl: 'https://drive.google.com/file/d/1AuErNEdu8jDhhlXdcVxp4JhxHgk93VuN/view?usp=sharing' },
                     'siklus-4': { title: 'Instrumen Asesmen Siklus 4', previewUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/preview', downloadUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/view?usp=sharing' }
                 }
             },
             'dokumentasi': {
                 title: '📷 Dokumentasi Pembelajaran',
-                kendala: 'Mengabadikan momen interaksi penting tanpa mengganggu dinamika & konsentrasi belajar kelas.',
-                teori: 'Reflektif Visual dan Observasi Etno-pedagogi.',
-                keberhasilan: 'Foto dan rekaman video menjadi bahan kajian refleksi yang sangat efektif bersama Dosen Pembimbing.',
-                adaptasi: 'Mengatur posisi kamera statis di sudut kelas agar tidak mendistraksi perhatian peserta didik.',
-                pdfDocs: {
-                    'siklus-1': { title: 'Dokumentasi Siklus 1', previewUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/preview', downloadUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/view?usp=sharing' },
-                    'siklus-2': { title: 'Dokumentasi Siklus 2', previewUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/preview', downloadUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/view?usp=sharing' },
-                    'siklus-3': { title: 'Dokumentasi Siklus 3', previewUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/preview', downloadUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/view?usp=sharing' },
-                    'siklus-4': { title: 'Dokumentasi Siklus 4', previewUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/preview', downloadUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/view?usp=sharing' }
-                }
+                kendala: '', teori: '', keberhasilan: '', adaptasi: '',
+                pdfDocs: {}
             }
         };
 
-        // Data Lampiran Terbimbing
+        /* ===== DATA GALERI DOKUMENTASI PPL TERBIMBING =====
+           ⚠️ Ganti "GANTI_ID_PRAKTIK_MENGAJAR_VIDEO_3" & "GANTI_ID_NONMENGAJAR_5" dengan ID asli.
+        */
+        const dokumentasiData = {
+            'penerjunan': {
+                title: 'Penerjunan Mahasiswa PPL',
+                items: [
+                    { type: 'image', id: '1_A263aMeBZWvl3K9RYULWIlcUL0PzgMV', caption: 'Penyerahan mahasiswa PPL kepada pihak sekolah oleh Dosen Pembimbing Lapangan' },
+                    { type: 'image', id: '1ILGCEBDelf7Rz7WScnlsssMfpiTz2MSM', caption: 'Foto bersama Guru Pamong dan seluruh mahasiswa PPL' },
+                    { type: 'image', id: '1r_ZiwnkYIjvvwfdOOnL8UmFfmymv_gW5', caption: 'Sambutan Pihak Sekolah pada acara penerjunan mahasiswa PPL' }
+                ]
+            },
+            'asistensi': {
+                title: 'Asistensi Mengajar',
+                items: [
+                    { type: 'image', id: '1xGG1icHZODaHwDzsteSh3cQ9jvoHjclY', caption: 'Observasi kelas bersama Guru Pamong sebelum praktik mengajar' },
+                    { type: 'image', id: '1_flchvkb8-jSDaoUPzKrMPdMJDtUOQgH', caption: 'Pembiasaan Leadership Character sebagai bagian dari budaya industri' },
+                    { type: 'image', id: '1NDQB_NZa5H8Kws1dsKwT223ytKC5UU6Z', caption: 'Pembelajaran oleh Guru Pamong' },
+                    { type: 'image', id: '1cdYaZtjUg1ytKFb0ENjgDkTnqXCKuprU', caption: 'Melakukan pendampingan kepada siswa saat mengerjakan tugas' }
+                ]
+            },
+            'praktik-mengajar': {
+                title: 'Praktik Mengajar',
+                items: [
+                    { type: 'image', id: '1n-XYpDllI14R4otMvqVgrOSybIQVMDm3', caption: 'Penyampaian materi saat praktik mengajar' },
+                    { type: 'image', id: '1EZaW_o4imdhCvTEbPRar7gse19JQYaUZ', caption: 'Pendampingan pengerjaan lembar kerja murid' },
+                    { type: 'image', id: '1tS-wM0846ElYiYaT6_R8tKSF0ndraJih', caption: 'Foto bersama murid kelas X SIJA 1' },
+                    { type: 'video', id: '1xWuJsyvR_n6C_g9jwQwHYAcyDJ8G32NA', caption: 'Rekaman praktik mengajar Siklus 1 di depan kelas' },
+                    { type: 'video', id: '1COlwn0i9FbeIn1VEPI4AK1IyLWFXDl26', caption: 'Rekaman praktik mengajar Siklus 2 di depan kelas' },
+                    { type: 'video', id: 'GANTI_ID_PRAKTIK_MENGAJAR_VIDEO_3', caption: 'Rekaman praktik mengajar Siklus 3 di depan kelas' }
+                ]
+            },
+            'non-mengajar': {
+                title: 'Kegiatan Non-Mengajar',
+                items: [
+                    { type: 'image', id: '1KlNg0Iolqa6zM1Ik-LcUpxvqqRw-66sv', caption: 'Piket harian bersama guru dan staf sekolah' },
+                    { type: 'image', id: '1s9UT6emTUCOxqXGxDN_R8Q54at3cy-7j', caption: 'Mengikuti upacara bendera hari Senin' },
+                    { type: 'image', id: '1rTfmaFcGJFN-NFPfb6GBtri9Xc3L_j-m', caption: 'Pendampingan kegiatan pengondisian siswa pasca PPL' },
+                    { type: 'image', id: '1pmU63Df0GTnVIWMxYNHuv0JSH_QVRnzZ', caption: 'Pendampingan kegiatan pesantren kilat' },
+                    { type: 'image', id: '1r2uL2ptLuiWzh94QmQ_H23aqdZhoq1dJ', caption: 'Berbusana Gagrak di hari Kamis Pon' }
+                ]
+            }
+        };
+
         const lampiran7Data = {
-            'siklus-1': { score: '92.5', evaluator: 'Penilai: Guru Pamong PPL Terbimbing', title: 'Lampiran 7 Siklus 1', previewUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/preview', downloadUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/view?usp=sharing' },
-            'siklus-2': { score: '94.0', evaluator: 'Penilai: Guru Pamong PPL Terbimbing', title: 'Lampiran 7 Siklus 2', previewUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/preview', downloadUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/view?usp=sharing' },
-            'siklus-3': { score: '96.0', evaluator: 'Penilai: Guru Pamong PPL Terbimbing', title: 'Lampiran 7 Siklus 3', previewUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/preview', downloadUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/view?usp=sharing' }
+            'siklus-1': { score: '3', evaluator: 'Penilai: Guru Pamong PPL Terbimbing', title: 'Lampiran 7 Siklus 1', previewUrl: 'https://drive.google.com/file/d/1HAaITRx5-CTPs509RaafyrTaEqNxT9ae/preview', downloadUrl: 'https://drive.google.com/file/d/1HAaITRx5-CTPs509RaafyrTaEqNxT9ae/view?usp=sharing' },
+            'siklus-2': { score: '3', evaluator: 'Penilai: Guru Pamong PPL Terbimbing', title: 'Lampiran 7 Siklus 2', previewUrl: 'https://drive.google.com/file/d/1ZjsRVEmgSgdR55Adqi_onfKOvST0dn0K/preview', downloadUrl: 'https://drive.google.com/file/d/1ZjsRVEmgSgdR55Adqi_onfKOvST0dn0K/view?usp=sharing' },
+            'siklus-3': { score: '3', evaluator: 'Penilai: Guru Pamong PPL Terbimbing', title: 'Lampiran 7 Siklus 3', previewUrl: 'https://drive.google.com/file/d/1iMBCEhdjhy7RpXK4YtrjCQVl1bvUBwyG/preview', downloadUrl: 'https://drive.google.com/file/d/1iMBCEhdjhy7RpXK4YtrjCQVl1bvUBwyG/view?usp=sharing' }
         };
 
         const lampiran8Data = {
-            'siklus-1': { score: '94.0', evaluator: 'Penilai: Guru Pamong PPL Terbimbing', title: 'Lampiran 8 Siklus 1', previewUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/preview', downloadUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/view?usp=sharing' },
-            'siklus-2': { score: '95.5', evaluator: 'Penilai: Guru Pamong PPL Terbimbing', title: 'Lampiran 8 Siklus 2', previewUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/preview', downloadUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/view?usp=sharing' },
-            'siklus-3': { score: '97.0', evaluator: 'Penilai: Guru Pamong PPL Terbimbing', title: 'Lampiran 8 Siklus 3', previewUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/preview', downloadUrl: 'https://drive.google.com/file/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs/view?usp=sharing' }
+            'siklus-1': { score: '3', evaluator: 'Penilai: Guru Pamong PPL Terbimbing', title: 'Lampiran 8 Siklus 1', previewUrl: 'https://drive.google.com/file/d/1uL8LgrhrqcQh6-dCSo6YYxyvdzqwtWBu/preview', downloadUrl: 'https://drive.google.com/file/d/1uL8LgrhrqcQh6-dCSo6YYxyvdzqwtWBu/view?usp=sharing' },
+            'siklus-2': { score: '3', evaluator: 'Penilai: Guru Pamong PPL Terbimbing', title: 'Lampiran 8 Siklus 2', previewUrl: 'https://drive.google.com/file/d/1R16FwGaj13_8XYLvZh3qiC0HG9I5I2Hj/preview', downloadUrl: 'https://drive.google.com/file/d/1R16FwGaj13_8XYLvZh3qiC0HG9I5I2Hj/view?usp=sharing' },
+            'siklus-3': { score: '3', evaluator: 'Penilai: Guru Pamong PPL Terbimbing', title: 'Lampiran 8 Siklus 3', previewUrl: 'https://drive.google.com/file/d/1Bmih9m5_R4kk-4Gk2YaukLsPU_csXFIS/preview', downloadUrl: 'https://drive.google.com/file/d/1Bmih9m5_R4kk-4Gk2YaukLsPU_csXFIS/view?usp=sharing' }
         };
 
-        // State variabel PPL Terbimbing
         let currentArtefakKey = 'modul-ajar';
         let currentSiklusKey = 'siklus-1';
-
-        // State variabel PPL Mandiri (Eport 1 & Eport 2)
         let currentArtefakMandiriKey = 'modul-ajar';
         let currentArtefakMandiriEport2Key = 'modul-ajar';
         let currentSiklusMandiriEport2Key = 'siklus-2';
+        let currentDokumentasiTab = 'penerjunan';
 
-        // Fungsi Perpindahan Halaman Utama
         function switchTab(tabName) {
             document.querySelectorAll('.page-content').forEach(page => page.classList.add('hidden'));
-            
             const selectedPage = document.getElementById(`page-${tabName}`);
             if (selectedPage) selectedPage.classList.remove('hidden');
-
             const navs = ['beranda', 'ppl-terbimbing', 'ppl-mandiri'];
             navs.forEach(nav => {
                 const btn = document.getElementById(`nav-${nav}`);
                 if (btn) {
-                    if (nav === tabName) {
-                        btn.className = "px-5 py-2 rounded-full text-sm font-semibold bg-white text-pink-600 shadow-xs transition cursor-pointer";
-                    } else {
-                        btn.className = "px-5 py-2 rounded-full text-sm font-medium text-gray-600 hover:text-pink-600 hover:bg-white/60 transition cursor-pointer";
-                    }
+                    if (nav === tabName) btn.className = "px-5 py-2 rounded-full text-sm font-semibold bg-white text-pink-600 shadow-xs transition cursor-pointer";
+                    else btn.className = "px-5 py-2 rounded-full text-sm font-medium text-gray-600 hover:text-pink-600 hover:bg-white/60 transition cursor-pointer";
                 }
             });
-
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Toggle Dropdown PPL Terbimbing
         function toggleEportMenu() {
             const dropdown = document.getElementById('eport-dropdown');
             const arrow = document.getElementById('menu-arrow');
             dropdown.classList.toggle('hidden');
+            if (!dropdown.classList.contains('hidden')) dropdown.classList.add('animate-dropdown');
             if (arrow) arrow.classList.toggle('rotate-180');
         }
-
         function closeEportMenu() {
             const dropdown = document.getElementById('eport-dropdown');
             const arrow = document.getElementById('menu-arrow');
             if (dropdown) dropdown.classList.add('hidden');
             if (arrow) arrow.classList.remove('rotate-180');
         }
-
-        // Toggle Dropdown PPL Mandiri
         function toggleEportMenuMandiri() {
             const dropdown = document.getElementById('eport-dropdown-mandiri');
             const arrow = document.getElementById('menu-arrow-mandiri');
             dropdown.classList.toggle('hidden');
+            if (!dropdown.classList.contains('hidden')) dropdown.classList.add('animate-dropdown');
             if (arrow) arrow.classList.toggle('rotate-180');
         }
-
         function closeEportMenuMandiri() {
             const dropdown = document.getElementById('eport-dropdown-mandiri');
             const arrow = document.getElementById('menu-arrow-mandiri');
@@ -1161,116 +891,166 @@
             if (arrow) arrow.classList.remove('rotate-180');
         }
 
-        // Switch Artefak Tab PPL Terbimbing
+        /* ====== RENDER GALERI DOKUMENTASI ====== */
+        function renderDokumentasiGallery(tabKey) {
+            const data = dokumentasiData[tabKey];
+            if (!data) return;
+
+            const grid = document.getElementById('dok-gallery-grid');
+            const empty = document.getElementById('dok-gallery-empty');
+
+            if (!data.items || data.items.length === 0) {
+                grid.innerHTML = '';
+                empty.classList.remove('hidden');
+                return;
+            }
+            empty.classList.add('hidden');
+
+            grid.innerHTML = data.items.map(item => {
+                const isVideo = item.type === 'video';
+                const viewUrl = `https://drive.google.com/file/d/${item.id}/view?usp=sharing`;
+                const thumbUrl = `https://drive.google.com/thumbnail?id=${item.id}&sz=w800`;
+
+                const mediaHtml = isVideo
+                    ? `<a href="${viewUrl}" target="_blank" rel="noopener"
+                          class="block relative w-full aspect-video bg-gradient-to-br from-gray-800 to-gray-900 rounded-t-xl overflow-hidden group/img">
+                           <img src="${thumbUrl}"
+                                alt="${item.caption}" loading="lazy"
+                                class="w-full h-full object-cover opacity-80 group-hover/img:opacity-95 transition duration-300"
+                                onerror="this.style.display='none'">
+                           <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                               <div class="w-14 h-14 rounded-full bg-white/95 group-hover/img:bg-pink-500 group-hover/img:scale-110 flex items-center justify-center shadow-xl transition-all duration-300">
+                                   <svg class="w-6 h-6 text-pink-600 group-hover/img:text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                       <path d="M8 5v14l11-7z"/>
+                                   </svg>
+                               </div>
+                           </div>
+                           <span class="absolute top-2 right-2 bg-rose-500/90 text-white text-[10px] px-2 py-0.5 rounded-full backdrop-blur-sm font-semibold">▶ Tonton</span>
+                       </a>`
+                    : `<a href="${viewUrl}" target="_blank" rel="noopener"
+                          class="block relative w-full aspect-video bg-gray-100 rounded-t-xl overflow-hidden group/img">
+                           <img src="${thumbUrl}"
+                                alt="${item.caption}" loading="lazy"
+                                class="w-full h-full object-cover group-hover/img:scale-105 transition duration-300">
+                           <div class="absolute inset-0 bg-black/0 group-hover/img:bg-black/10 transition"></div>
+                           <span class="absolute top-2 right-2 bg-black/60 text-white text-[10px] px-2 py-0.5 rounded-full backdrop-blur-sm">🔍 Perbesar</span>
+                       </a>`;
+
+                return `
+                    <div class="bg-white rounded-xl border border-pink-100 overflow-hidden shadow-2xs hover:shadow-md transition flex flex-col">
+                        ${mediaHtml}
+                        <div class="p-3 border-t border-pink-100 flex-grow">
+                            <span class="inline-block mb-1 text-[10px] font-bold uppercase tracking-wider ${isVideo ? 'text-rose-500' : 'text-pink-500'}">${isVideo ? '🎬 Video' : '🖼️ Foto'}</span>
+                            <p class="text-xs md:text-sm text-gray-700 font-medium leading-snug">${item.caption}</p>
+                        </div>
+                    </div>`;
+            }).join('');
+        }
+
+        function switchDokumentasiTab(tabKey) {
+            currentDokumentasiTab = tabKey;
+            renderDokumentasiGallery(tabKey);
+
+            document.querySelectorAll('.dok-tab').forEach(btn => {
+                btn.className = "dok-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer text-gray-600 hover:text-pink-600 hover:bg-pink-50";
+            });
+            const activeBtn = document.getElementById(`tab-dok-${tabKey}`);
+            if (activeBtn) {
+                activeBtn.className = "dok-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer bg-pink-600 text-white shadow-xs";
+            }
+        }
+
+        /* ====== TAB ARTEFAK PPL TERBIMBING ====== */
         function switchArtefakTab(artefakKey) {
             currentArtefakKey = artefakKey;
             const data = artefakData[artefakKey];
             if (!data) return;
 
-            document.getElementById('artefak-title').innerHTML = data.title;
-            document.getElementById('artefak-kendala').innerText = data.kendala;
-            document.getElementById('artefak-teori').innerText = data.teori;
-            document.getElementById('artefak-keberhasilan').innerText = data.keberhasilan;
-            document.getElementById('artefak-adaptasi').innerText = data.adaptasi;
+            const analysisView = document.getElementById('artefak-analysis-view');
+            const galleryView = document.getElementById('artefak-gallery-view');
+
+            if (artefakKey === 'dokumentasi') {
+                analysisView.classList.add('hidden');
+                galleryView.classList.remove('hidden');
+                switchDokumentasiTab(currentDokumentasiTab);
+            } else {
+                analysisView.classList.remove('hidden');
+                galleryView.classList.add('hidden');
+                document.getElementById('artefak-title').innerHTML = data.title;
+                document.getElementById('artefak-kendala').innerText = data.kendala;
+                document.getElementById('artefak-teori').innerText = data.teori;
+                document.getElementById('artefak-keberhasilan').innerText = data.keberhasilan;
+                document.getElementById('artefak-adaptasi').innerText = data.adaptasi;
+                switchSiklusTab(currentSiklusKey);
+            }
 
             document.querySelectorAll('.artefak-tab').forEach(btn => {
                 btn.className = "artefak-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer text-gray-600 hover:text-pink-600 hover:bg-pink-50";
             });
-
             const activeBtn = document.getElementById(`tab-${artefakKey}`);
-            if (activeBtn) {
-                activeBtn.className = "artefak-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer bg-pink-600 text-white shadow-xs";
-            }
-
-            switchSiklusTab(currentSiklusKey);
+            if (activeBtn) activeBtn.className = "artefak-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer bg-pink-600 text-white shadow-xs";
         }
 
-        // Switch Siklus Tab PPL Terbimbing
         function switchSiklusTab(siklusKey) {
             currentSiklusKey = siklusKey;
             const data = artefakData[currentArtefakKey];
-            if (!data || !data.pdfDocs[siklusKey]) return;
-
+            if (!data || !data.pdfDocs || !data.pdfDocs[siklusKey]) return;
             const docData = data.pdfDocs[siklusKey];
             document.getElementById('pdf-doc-title').innerText = docData.title;
             document.getElementById('pdf-frame').src = docData.previewUrl;
             document.getElementById('pdf-download-link').href = docData.downloadUrl;
-
             document.querySelectorAll('.siklus-tab').forEach(btn => {
                 btn.className = "siklus-tab px-5 py-2 rounded-xl text-sm font-medium transition cursor-pointer text-gray-600 hover:text-pink-600 hover:bg-pink-50";
             });
-
             const activeBtn = document.getElementById(`tab-s-${siklusKey}`);
-            if (activeBtn) {
-                activeBtn.className = "siklus-tab px-5 py-2 rounded-xl text-sm font-semibold transition cursor-pointer bg-white text-pink-600 border border-pink-200 shadow-xs";
-            }
+            if (activeBtn) activeBtn.className = "siklus-tab px-5 py-2 rounded-xl text-sm font-semibold transition cursor-pointer bg-white text-pink-600 border border-pink-200 shadow-xs";
         }
 
-        // Switch Lampiran 7 Terbimbing
         function switchLampiran7(siklusKey) {
             const data = lampiran7Data[siklusKey];
             if (!data) return;
-
             document.getElementById('l7-score').innerText = data.score;
             document.getElementById('l7-evaluator').innerText = data.evaluator;
             document.getElementById('l7-doc-title').innerText = data.title;
             document.getElementById('l7-pdf-frame').src = data.previewUrl;
             document.getElementById('l7-download-link').href = data.downloadUrl;
-
             document.querySelectorAll('.tab-l7').forEach(btn => {
                 btn.className = "tab-l7 px-3 py-1.5 rounded-lg text-xs font-medium text-gray-600 hover:text-pink-600 transition cursor-pointer";
             });
-
             const activeBtn = document.getElementById(`tab-l7-${siklusKey}`);
-            if (activeBtn) {
-                activeBtn.className = "tab-l7 px-3 py-1.5 rounded-lg text-xs font-semibold bg-pink-600 text-white transition cursor-pointer";
-            }
+            if (activeBtn) activeBtn.className = "tab-l7 px-3 py-1.5 rounded-lg text-xs font-semibold bg-pink-600 text-white transition cursor-pointer";
         }
 
-        // Switch Lampiran 8 Terbimbing
         function switchLampiran8(siklusKey) {
             const data = lampiran8Data[siklusKey];
             if (!data) return;
-
             document.getElementById('l8-score').innerText = data.score;
             document.getElementById('l8-evaluator').innerText = data.evaluator;
             document.getElementById('l8-doc-title').innerText = data.title;
             document.getElementById('l8-pdf-frame').src = data.previewUrl;
             document.getElementById('l8-download-link').href = data.downloadUrl;
-
             document.querySelectorAll('.tab-l8').forEach(btn => {
                 btn.className = "tab-l8 px-3 py-1.5 rounded-lg text-xs font-medium text-gray-600 hover:text-pink-600 transition cursor-pointer";
             });
-
             const activeBtn = document.getElementById(`tab-l8-${siklusKey}`);
-            if (activeBtn) {
-                activeBtn.className = "tab-l8 px-3 py-1.5 rounded-lg text-xs font-semibold bg-pink-500 text-white transition cursor-pointer";
-            }
+            if (activeBtn) activeBtn.className = "tab-l8 px-3 py-1.5 rounded-lg text-xs font-semibold bg-pink-500 text-white transition cursor-pointer";
         }
 
-        // Functions for Mandiri E-Portofolio 1 (Siklus 1 Only)
         function switchArtefakTabMandiri(artefakKey) {
             currentArtefakMandiriKey = artefakKey;
             const data = artefakData[artefakKey];
             if (!data) return;
-
             document.getElementById('m-artefak-title').innerText = `${data.title} (Mandiri)`;
             document.getElementById('m-artefak-kendala').innerText = data.kendala;
             document.getElementById('m-artefak-teori').innerText = data.teori;
             document.getElementById('m-artefak-keberhasilan').innerText = data.keberhasilan;
             document.getElementById('m-artefak-adaptasi').innerText = data.adaptasi;
-
             document.querySelectorAll('.m-artefak-tab').forEach(btn => {
                 btn.className = "m-artefak-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer text-gray-600 hover:text-rose-600 hover:bg-pink-50";
             });
-
             const activeBtn = document.getElementById(`m-tab-${artefakKey}`);
-            if (activeBtn) {
-                activeBtn.className = "m-artefak-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer bg-rose-600 text-white shadow-xs";
-            }
-
-            // Always load Siklus 1 for Mandiri Eport 1
-            const docData = data.pdfDocs['siklus-1'];
+            if (activeBtn) activeBtn.className = "m-artefak-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer bg-rose-600 text-white shadow-xs";
+            const docData = data.pdfDocs && data.pdfDocs['siklus-1'];
             if (docData) {
                 document.getElementById('m-pdf-doc-title').innerText = `${docData.title} Mandiri`;
                 document.getElementById('m-pdf-frame').src = docData.previewUrl;
@@ -1278,56 +1058,42 @@
             }
         }
 
-        // Functions for Mandiri E-Portofolio 2 (Siklus 2, 3, 4)
         function switchArtefakTabMandiriEport2(artefakKey) {
             currentArtefakMandiriEport2Key = artefakKey;
             const data = artefakData[artefakKey];
             if (!data) return;
-
             document.getElementById('m2-artefak-title').innerText = `${data.title} (Mandiri)`;
             document.getElementById('m2-artefak-kendala').innerText = data.kendala;
             document.getElementById('m2-artefak-teori').innerText = data.teori;
             document.getElementById('m2-artefak-keberhasilan').innerText = data.keberhasilan;
             document.getElementById('m2-artefak-adaptasi').innerText = data.adaptasi;
-
             document.querySelectorAll('.m2-artefak-tab').forEach(btn => {
                 btn.className = "m2-artefak-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer text-gray-600 hover:text-rose-600 hover:bg-pink-50";
             });
-
             const activeBtn = document.getElementById(`m2-tab-${artefakKey}`);
-            if (activeBtn) {
-                activeBtn.className = "m2-artefak-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer bg-rose-600 text-white shadow-xs";
-            }
-
+            if (activeBtn) activeBtn.className = "m2-artefak-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer bg-rose-600 text-white shadow-xs";
             switchSiklusTabMandiriEport2(currentSiklusMandiriEport2Key);
         }
 
         function switchSiklusTabMandiriEport2(siklusKey) {
             currentSiklusMandiriEport2Key = siklusKey;
             const data = artefakData[currentArtefakMandiriEport2Key];
-            if (!data || !data.pdfDocs[siklusKey]) return;
-
+            if (!data || !data.pdfDocs || !data.pdfDocs[siklusKey]) return;
             const docData = data.pdfDocs[siklusKey];
             document.getElementById('m2-pdf-doc-title').innerText = `${docData.title} Mandiri`;
             document.getElementById('m2-pdf-frame').src = docData.previewUrl;
             document.getElementById('m2-pdf-download-link').href = docData.downloadUrl;
-
             document.querySelectorAll('.m2-siklus-tab').forEach(btn => {
                 btn.className = "m2-siklus-tab px-5 py-2 rounded-xl text-sm font-medium transition cursor-pointer text-gray-600 hover:text-rose-600 hover:bg-pink-50";
             });
-
             const activeBtn = document.getElementById(`m2-tab-s-${siklusKey}`);
-            if (activeBtn) {
-                activeBtn.className = "m2-siklus-tab px-5 py-2 rounded-xl text-sm font-semibold transition cursor-pointer bg-white text-rose-600 border border-pink-200 shadow-xs";
-            }
+            if (activeBtn) activeBtn.className = "m2-siklus-tab px-5 py-2 rounded-xl text-sm font-semibold transition cursor-pointer bg-white text-rose-600 border border-pink-200 shadow-xs";
         }
 
-        // Inisialisasi awal saat window loaded
         window.addEventListener('DOMContentLoaded', () => {
             switchArtefakTab('modul-ajar');
             switchLampiran7('siklus-1');
             switchLampiran8('siklus-1');
-
             switchArtefakTabMandiri('modul-ajar');
             switchArtefakTabMandiriEport2('modul-ajar');
         });
