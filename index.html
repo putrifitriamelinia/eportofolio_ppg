@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio PPL - PPG Prajabatan</title>
+    <title>Portofolio PPL - PPG Calon Guru</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -37,6 +37,18 @@
         body.dark-mode .quote-box .quote-divider { background-color: #38bdf8 !important; opacity: 0.6 !important; }
         body.dark-mode .quote-box .quote-author { color: #7dd3fc !important; }
         body.dark-mode .misi-utama-card { background: linear-gradient(to right, #15294a, #1a365d) !important; border: 1px solid #234473 !important; }
+        body.dark-mode .misi-utama-card .misi-num {
+            color: #ffffff !important;
+            background-color: rgba(56, 189, 248, 0.22) !important;
+            border-color: rgba(56, 189, 248, 0.45) !important;
+        }
+        body.dark-mode .misi-utama-card .misi-badge {
+            color: #ffffff !important;
+            background-color: rgba(56, 189, 248, 0.22) !important;
+        }
+        body.dark-mode .misi-utama-card p {
+            color: #e2e8f0 !important;
+        }
         body.dark-mode .lptk-badge { background-color: #1a2e4a !important; border-color: #234473 !important; color: #38bdf8 !important; }
         body.dark-mode .lptk-badge strong { color: #7dd3fc !important; }
         @keyframes floatBounce { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-12px); } }
@@ -85,7 +97,7 @@
             <section class="relative overflow-hidden pt-12 pb-8 md:pt-16 md:pb-10 bg-gradient-to-b from-pink-50/60 via-white to-white">
                 <div class="max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center">
                     <div class="md:col-span-7 space-y-6 text-center md:text-left">
-                        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-pink-100/80 text-pink-700 text-xs font-semibold tracking-wide uppercase">💻 PPG Prajabatan Informatika UNY</span>
+                        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-pink-100/80 text-pink-700 text-xs font-semibold tracking-wide uppercase">💻 PPG Calon Guru Informatika UNY</span>
                         <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight leading-tight">Selamat Datang di<br> <span class="text-pink-600">E-Portofolio Saya</span></h1>
                         <p class="text-lg text-gray-600 leading-relaxed font-normal">Perkenalkan, saya <strong class="text-gray-800">Putri Fitria Melinia Sari</strong>, calon guru profesional bidang studi <strong class="text-pink-600">Informatika</strong>. Website ini adalah rekam jejak, refleksi, dan filosofi saya selama menjalani Praktik Pengalaman Lapangan (PPL).</p>
                         <div class="pt-2 flex flex-wrap justify-center md:justify-start gap-4">
@@ -122,14 +134,14 @@
                                 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-pink-100 pb-3">
                                     <div>
                                         <h3 class="text-xl font-bold text-gray-900">Putri Fitria Melinia Sari</h3>
-                                        <p class="text-xs text-pink-600 font-semibold mt-0.5">Mahasiswa PPG Prajabatan Informatika</p>
+                                        <p class="text-xs text-pink-600 font-semibold mt-0.5">Mahasiswa PPG Calon Guru Informatika</p>
                                     </div>
                                     <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2 self-center sm:self-auto">
                                         <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-white border border-pink-200 text-gray-700 shadow-2xs"><span class="text-pink-500">🆔</span><span>NIM: <strong class="text-pink-600">25105260629</strong></span></div>
                                         <div class="lptk-badge inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-pink-100/80 border border-pink-200 text-pink-800 shadow-2xs"><span>🎓</span><span>LPTK: <strong class="text-pink-900">UNY</strong></span></div>
                                     </div>
                                 </div>
-                                <p class="text-gray-600 text-sm leading-relaxed text-justify">Saya adalah seorang mahasiswi Pendidikan Profesi Guru (PPG) Prajabatan Gelombang 1 Bidang Studi Informatika di Universitas Negeri Yogyakarta. Memiliki dedikasi tinggi dalam mengembangkan pendekatan pembelajaran berbasis logika dan computational thinking yang interaktif, inklusif, serta relevan dengan perkembangan dunia digital siswa era Gen-Z.</p>
+                                <p class="text-gray-600 text-sm leading-relaxed text-justify">Saya adalah mahasiswi Pendidikan Profesi Guru (PPG) Calon Guru Gelombang 1 Bidang Studi Informatika di Universitas Negeri Yogyakarta. Memiliki dedikasi dalam mengembangkan pembelajaran Informatika berbasis logika dan computational thinking yang interaktif, inklusif, serta relevan dengan karakteristik murid di era digital. Saya percaya bahwa teknologi bukan hanya untuk digunakan, tetapi juga untuk dimanfaatkan dalam menciptakan solusi. Oleh karena itu, saya berkomitmen menjadi guru yang mampu membimbing murid untuk berpikir kritis, kreatif, dan adaptif dalam menghadapi perkembangan teknologi.</p>
                             </div>
                         </div>
                     </div>
@@ -141,7 +153,7 @@
                                     <div class="w-10 h-10 rounded-xl bg-pink-100 text-pink-600 flex items-center justify-center font-bold">📍</div>
                                     <h3 class="text-xl font-bold text-gray-800">Asal Daerah & Keunikan</h3>
                                 </div>
-                                <p class="text-gray-600 leading-relaxed text-justify">Saya berasal dari sebuah daerah yang kaya akan nilai tradisi dan kearifan lokal yang sarat makna. Daerah asal saya tidak hanya dikenal karena keindahan lanskap alamnya, tetapi juga semangat gotong royong masyarakatnya yang masih terjaga erat dalam kehidupan sehari-hari. Nilai kebersamaan, keramahtamahan, serta filosofi hidup masyarakat lokal tersebut telah membentuk karakter dasar saya untuk selalu menghargai perbedaan, tekun dalam belajar, dan memiliki kepedulian sosial yang tinggi.</p>
+                                <p class="text-gray-600 text-sm leading-relaxed text-justify">Saya lahir dan tumbuh di Kota Bekasi, sebuah kota yang dinamis dengan masyarakat yang beragam. Keberagaman ini tercermin dari perpaduan budaya Betawi, Sunda, serta masyarakat pendatang dari berbagai daerah di Indonesia. Di tengah keberagaman tersebut, nilai kebersamaan, keramahtamahan, dan semangat gotong royong masih menjadi bagian dari kehidupan masyarakat. <br> Tumbuh dalam lingkungan yang beragam membentuk saya menjadi pribadi yang adaptif, terbuka terhadap perubahan, dan menghargai perbedaan. Nilai-nilai kebersamaan yang saya temui juga menumbuhkan kepedulian sosial serta mendorong saya untuk terus belajar dan berkembang.</p>
                             </div>
                             <div class="md:col-span-5 flex justify-center">
                                 <div class="relative w-full h-52 md:h-60 rounded-2xl overflow-hidden border-2 border-pink-200/80 shadow-md group">
@@ -157,7 +169,7 @@
                             <div class="w-10 h-10 rounded-xl bg-pink-100 text-pink-600 flex items-center justify-center font-bold">💡</div>
                             <h3 class="text-xl font-bold text-gray-800">Inspirasi & Tujuan Menjadi Guru Profesional</h3>
                         </div>
-                        <p class="text-gray-600 leading-relaxed text-justify">Perjalanan saya menuju profesi guru dilandasi oleh keyakinan mendalam bahwa pendidikan adalah jembatan utama untuk memutus rantai ketertinggalan dan membuka peluang masa depan yang luas bagi anak bangsa. Sebagai calon guru profesional di era modern, tujuan saya adalah menghadirkan pembelajaran yang berpusat pada peserta didik (*student-centered learning*), inklusif, adaptif terhadap perkembangan teknologi, serta mampu menciptakan ruang kelas yang aman dan menyenangkan.</p>
+                        <p class="text-gray-600 text-sm leading-relaxed text-justify">Perjalanan saya memilih profesi guru dilandasi oleh keyakinan bahwa pendidikan merupakan jembatan untuk membuka kesempatan dan masa depan yang lebih baik bagi generasi bangsa. Saya percaya bahwa pendidikan, khususnya di bidang Informatika, memiliki peran penting dalam membekali murid agar mampu memahami, memanfaatkan, dan mengembangkan teknologi secara optimal. <br> Tujuan saya adalah menjadi guru profesional yang berpihak pada murid, senantiasa mengembangkan diri melalui refleksi berkelanjutan, serta menghadirkan pembelajaran yang bermakna, kontekstual, dan adaptif terhadap perkembangan zaman.</p>
                     </div>
 
                     <div class="quote-box relative bg-gradient-to-br from-pink-100/90 via-pink-50 to-rose-100/70 border border-pink-200/80 text-gray-800 rounded-2xl p-4 sm:p-5 shadow-sm max-w-lg mx-auto">
@@ -182,13 +194,13 @@
                     <div>
                         <span class="text-xs font-bold text-pink-600 uppercase tracking-widest bg-pink-100 px-3 py-1 rounded-full">Dokumentasi Praktik</span>
                         <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 mt-2">PPL Terbimbing</h1>
-                        <p class="text-gray-600 mt-1">Kumpulan E-Portofolio 1 & 2 selama pelaksanaan PPL Terbimbing</p>
+                        <p class="text-gray-600 mt-1">Dokumentasi Praktik selama pelaksanaan PPL Terbimbing</p>
                     </div>
                     <div class="relative w-full md:w-auto">
                         <button onclick="toggleEportMenu()" class="w-full md:w-auto flex items-center justify-between gap-3 px-5 py-3 bg-white border border-pink-200 rounded-2xl shadow-sm hover:border-pink-300 hover:shadow-md text-pink-700 font-semibold cursor-pointer transition-all">
                             <span class="flex items-center gap-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
-                                Navigasi E-Portofolio
+                                Navigasi PPL Terbimbing
                             </span>
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform duration-200" id="menu-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
                         </button>
@@ -199,48 +211,26 @@
                                 <span class="text-white font-bold text-sm tracking-wide">Daftar E-Portofolio</span>
                             </div>
                             <div class="p-3 space-y-3">
-                                <div>
-                                    <div class="px-2 py-1.5 flex items-center gap-2">
-                                        <span class="w-6 h-6 rounded-lg bg-gradient-to-br from-pink-500 to-rose-400 text-white flex items-center justify-center text-xs font-bold shadow-sm">1</span>
-                                        <span class="text-xs font-bold text-pink-500 uppercase tracking-wider">E-Portofolio 1</span>
-                                    </div>
-                                    <div class="mt-1 space-y-1">
-                                        <a href="#analisis-artefak" onclick="closeEportMenu()" class="group flex items-center gap-3 px-3 py-2.5 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-pink-50 hover:to-rose-50 hover:text-pink-700 rounded-xl transition-all">
-                                            <span class="w-8 h-8 rounded-lg bg-pink-50 group-hover:bg-pink-500 text-pink-600 group-hover:text-white flex items-center justify-center text-base transition-all shadow-2xs">📄</span>
-                                            <span class="font-medium">Analisis Artefak</span>
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-auto text-gray-300 group-hover:text-pink-500 group-hover:translate-x-1 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
-                                        </a>
-                                        <a href="#lampiran-penilaian" onclick="closeEportMenu()" class="group flex items-center gap-3 px-3 py-2.5 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-pink-50 hover:to-rose-50 hover:text-pink-700 rounded-xl transition-all">
-                                            <span class="w-8 h-8 rounded-lg bg-pink-50 group-hover:bg-pink-500 text-pink-600 group-hover:text-white flex items-center justify-center text-base transition-all shadow-2xs">📋</span>
-                                            <span class="font-medium">Lampiran Penilaian</span>
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-auto text-gray-300 group-hover:text-pink-500 group-hover:translate-x-1 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
-                                        </a>
-                                        <a href="#model-guru" onclick="closeEportMenu()" class="group flex items-center gap-3 px-3 py-2.5 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-pink-50 hover:to-rose-50 hover:text-pink-700 rounded-xl transition-all">
-                                            <span class="w-8 h-8 rounded-lg bg-pink-50 group-hover:bg-pink-500 text-pink-600 group-hover:text-white flex items-center justify-center text-base transition-all shadow-2xs">🎯</span>
-                                            <span class="font-medium">Model Guru</span>
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-auto text-gray-300 group-hover:text-pink-500 group-hover:translate-x-1 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="h-px bg-gradient-to-r from-transparent via-pink-200 to-transparent"></div>
-                                <div>
-                                    <div class="px-2 py-1.5 flex items-center gap-2">
-                                        <span class="w-6 h-6 rounded-lg bg-gradient-to-br from-pink-600 to-rose-500 text-white flex items-center justify-center text-xs font-bold shadow-sm">2</span>
-                                        <span class="text-xs font-bold text-pink-500 uppercase tracking-wider">E-Portofolio 2</span>
-                                    </div>
-                                    <div class="mt-1 space-y-1">
-                                        <a href="#refleksi-pengalaman" onclick="closeEportMenu()" class="group flex items-center gap-3 px-3 py-2.5 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-pink-50 hover:to-rose-50 hover:text-pink-700 rounded-xl transition-all">
-                                            <span class="w-8 h-8 rounded-lg bg-pink-50 group-hover:bg-pink-500 text-pink-600 group-hover:text-white flex items-center justify-center text-base transition-all shadow-2xs">📝</span>
-                                            <span class="font-medium">Refleksi Pengalaman Belajar</span>
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-auto text-gray-300 group-hover:text-pink-500 group-hover:translate-x-1 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
-                                        </a>
-                                        <a href="#filosofi-mengajar" onclick="closeEportMenu()" class="group flex items-center gap-3 px-3 py-2.5 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-pink-50 hover:to-rose-50 hover:text-pink-700 rounded-xl transition-all">
-                                            <span class="w-8 h-8 rounded-lg bg-pink-50 group-hover:bg-pink-500 text-pink-600 group-hover:text-white flex items-center justify-center text-base transition-all shadow-2xs">💡</span>
-                                            <span class="font-medium">Filosofi Mengajar</span>
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-auto text-gray-300 group-hover:text-pink-500 group-hover:translate-x-1 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
-                                        </a>
-                                    </div>
-                                </div>
+                                <a href="#analisis-artefak" onclick="closeEportMenu()" class="group flex items-center gap-3 px-3 py-2.5 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-pink-50 hover:to-rose-50 hover:text-pink-700 rounded-xl transition-all">
+                                    <span class="w-8 h-8 rounded-lg bg-pink-50 group-hover:bg-pink-500 text-pink-600 group-hover:text-white flex items-center justify-center text-base transition-all shadow-2xs">📄</span>
+                                    <span class="font-medium">Analisis Artefak</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-auto text-gray-300 group-hover:text-pink-500 group-hover:translate-x-1 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                                </a>
+                                <a href="#lampiran-penilaian" onclick="closeEportMenu()" class="group flex items-center gap-3 px-3 py-2.5 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-pink-50 hover:to-rose-50 hover:text-pink-700 rounded-xl transition-all">
+                                    <span class="w-8 h-8 rounded-lg bg-pink-50 group-hover:bg-pink-500 text-pink-600 group-hover:text-white flex items-center justify-center text-base transition-all shadow-2xs">📋</span>
+                                    <span class="font-medium">Lampiran Penilaian</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-auto text-gray-300 group-hover:text-pink-500 group-hover:translate-x-1 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                                </a>
+                                <a href="#model-guru" onclick="closeEportMenu()" class="group flex items-center gap-3 px-3 py-2.5 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-pink-50 hover:to-rose-50 hover:text-pink-700 rounded-xl transition-all">
+                                    <span class="w-8 h-8 rounded-lg bg-pink-50 group-hover:bg-pink-500 text-pink-600 group-hover:text-white flex items-center justify-center text-base transition-all shadow-2xs">🎯</span>
+                                    <span class="font-medium">Model Guru</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-auto text-gray-300 group-hover:text-pink-500 group-hover:translate-x-1 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                                </a>
+                                <a href="#filosofi-mengajar" onclick="closeEportMenu()" class="group flex items-center gap-3 px-3 py-2.5 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-pink-50 hover:to-rose-50 hover:text-pink-700 rounded-xl transition-all">
+                                    <span class="w-8 h-8 rounded-lg bg-pink-50 group-hover:bg-pink-500 text-pink-600 group-hover:text-white flex items-center justify-center text-base transition-all shadow-2xs">💡</span>
+                                    <span class="font-medium">Filosofi Mengajar</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-auto text-gray-300 group-hover:text-pink-500 group-hover:translate-x-1 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -249,12 +239,6 @@
 
             <div class="max-w-5xl mx-auto px-6 py-12 space-y-16">
                 <div class="space-y-8">
-                    <div class="flex items-center gap-4">
-                        <span class="px-4 py-1.5 bg-pink-500 text-white font-bold text-sm rounded-full">BAGIAN 1</span>
-                        <h2 class="text-2xl font-bold text-gray-900">E-Portofolio 1</h2>
-                        <div class="flex-grow h-px bg-pink-100"></div>
-                    </div>
-
                     <!-- Analisis Artefak -->
                     <div id="analisis-artefak" class="bg-white border border-pink-100 rounded-3xl p-6 md:p-8 shadow-xs space-y-6 hover:border-pink-200 transition">
                         <div class="flex items-center gap-3">
@@ -281,19 +265,19 @@
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div class="bg-white p-5 rounded-xl border border-pink-100/80 shadow-2xs space-y-2">
                                     <h5 class="font-bold text-pink-700 text-sm flex items-center gap-2">⚠️ Kendala Penyusunan</h5>
-                                    <p id="artefak-kendala" class="text-xs md:text-sm text-gray-600 leading-relaxed"></p>
+                                    <p id="artefak-kendala" class="text-xs md:text-sm text-gray-600 leading-relaxed text-justify"></p>
                                 </div>
                                 <div class="bg-white p-5 rounded-xl border border-pink-100/80 shadow-2xs space-y-2">
                                     <h5 class="font-bold text-pink-700 text-sm flex items-center gap-2">🧠 Teori / Konsep Pedagogi</h5>
-                                    <p id="artefak-teori" class="text-xs md:text-sm text-gray-600 leading-relaxed"></p>
+                                    <p id="artefak-teori" class="text-xs md:text-sm text-gray-600 leading-relaxed text-justify"></p>
                                 </div>
                                 <div class="bg-white p-5 rounded-xl border border-pink-100/80 shadow-2xs space-y-2">
                                     <h5 class="font-bold text-pink-700 text-sm flex items-center gap-2">🎯 Faktor Keberhasilan</h5>
-                                    <p id="artefak-keberhasilan" class="text-xs md:text-sm text-gray-600 leading-relaxed"></p>
+                                    <p id="artefak-keberhasilan" class="text-xs md:text-sm text-gray-600 leading-relaxed text-justify"></p>
                                 </div>
                                 <div class="bg-white p-5 rounded-xl border border-pink-100/80 shadow-2xs space-y-2">
-                                    <h5 class="font-bold text-pink-700 text-sm flex items-center gap-2">🔄 Adaptasi Situasi Kelas Lain</h5>
-                                    <p id="artefak-adaptasi" class="text-xs md:text-sm text-gray-600 leading-relaxed"></p>
+                                    <h5 class="font-bold text-pink-700 text-sm flex items-center gap-2">🔄 Penyesuaian Situasi Kelas</h5>
+                                    <p id="artefak-adaptasi" class="text-xs md:text-sm text-gray-600 leading-relaxed text-justify"></p>
                                 </div>
                             </div>
 
@@ -430,78 +414,63 @@
                                 <p class="text-xs text-gray-500">Misi, Kompetensi, dan Karakter Pendidik Profesional</p>
                             </div>
                         </div>
-                        <div class="misi-utama-card bg-gradient-to-r from-pink-500 to-rose-400 text-white rounded-2xl p-6 space-y-3 shadow-sm border border-pink-300/30">
-                            <span class="text-xs font-extrabold uppercase tracking-widest bg-white/20 px-3 py-1 rounded-full text-white">🎯 Misi Utama Pendidik</span>
-                            <h4 class="text-lg font-bold text-white">Menjadi Menara Suar Pembelajaran Berkesadaran & Inklusif</h4>
-                            <p class="text-sm text-pink-50 leading-relaxed">Merancang lingkungan belajar berdiferensiasi yang menghargai setiap potensi unik peserta didik, memfasilitasi rasa ingin tahu tanpa batas, serta membangun iklim kelas yang aman, empatik, dan berkesadaran.</p>
+                        <div class="misi-utama-card bg-gradient-to-r from-pink-500 to-rose-400 text-white rounded-2xl p-6 md:p-8 space-y-4 shadow-sm border border-pink-300/30">
+                            <span class="misi-badge inline-flex items-center text-xs font-extrabold uppercase tracking-widest bg-white/20 px-3 py-1 rounded-full text-white">🎯 Misi Utama Pendidik</span>
+                            <h4 class="text-lg md:text-xl font-bold text-white leading-snug">Menjadi Penuntun Pembelajaran yang Humanis, Inklusif, dan Reflektif</h4>
+                            <ul class="space-y-3 pt-1">
+                                <li class="flex items-start gap-3">
+                                    <span class="misi-num flex-shrink-0 w-7 h-7 rounded-lg bg-white/25 backdrop-blur-sm flex items-center justify-center text-xs font-bold text-white shadow-sm border border-white/30">1</span>
+                                    <p class="text-sm text-pink-50 leading-relaxed flex-1 text-justify">Merancang dan melaksanakan pembelajaran yang berpusat pada murid dengan memperhatikan keberagaman potensi, kebutuhan, dan karakteristiknya.</p>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="misi-num flex-shrink-0 w-7 h-7 rounded-lg bg-white/25 backdrop-blur-sm flex items-center justify-center text-xs font-bold text-white shadow-sm border border-white/30">2</span>
+                                    <p class="text-sm text-pink-50 leading-relaxed flex-1 text-justify">Mengintegrasikan teknologi dan permasalahan kontekstual dalam pembelajaran untuk mengembangkan kemampuan berpikir kritis, kreatif, dan pemecahan masalah.</p>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="misi-num flex-shrink-0 w-7 h-7 rounded-lg bg-white/25 backdrop-blur-sm flex items-center justify-center text-xs font-bold text-white shadow-sm border border-white/30">3</span>
+                                    <p class="text-sm text-pink-50 leading-relaxed flex-1 text-justify">Menciptakan lingkungan belajar yang inklusif, humanis, dan kolaboratif sehingga setiap murid merasa dihargai dan memiliki kesempatan untuk berkembang.</p>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="misi-num flex-shrink-0 w-7 h-7 rounded-lg bg-white/25 backdrop-blur-sm flex items-center justify-center text-xs font-bold text-white shadow-sm border border-white/30">4</span>
+                                    <p class="text-sm text-pink-50 leading-relaxed flex-1 text-justify">Melakukan refleksi dan pengembangan diri secara berkelanjutan untuk meningkatkan kualitas pembelajaran dan kompetensi profesional.</p>
+                                </li>
+                            </ul>
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div class="bg-pink-50/40 border border-pink-100 rounded-2xl p-5 space-y-3">
-                                <h4 class="font-bold text-pink-700 text-base flex items-center gap-2">📚 Kompetensi Utama Guru</h4>
+                                <h4 class="font-bold text-pink-700 text-base flex items-center gap-2">📚 Kompetensi Utama Pendidik</h4>
                                 <ul class="text-xs md:text-sm text-gray-600 space-y-2 list-disc list-inside">
-                                    <li>Penguasaan Pedagogy & Content Knowledge (TPACK)</li>
-                                    <li>Keterampilan Asesmen Berkelanjutan (Formatif & Sumatif)</li>
-                                    <li>Manajemen Kelas Adaptif & Inklusif</li>
-                                    <li>Keahlian Komunikasi Empatik dengan Siswa & Orang Tua</li>
+                                    <li>Penguasaan Pedagogical Content Knowledge (TPACK)</li>
+                                    <li>Perancangan Asesmen Autentik dan Berkelanjutan</li>
+                                    <li>Pengelolaan Pembelajaran Berdiferensiasi dan Inklusif</li>
+                                    <li>Komunikasi Empatik dan Kolaboratif</li>
                                 </ul>
                             </div>
                             <div class="bg-pink-50/40 border border-pink-100 rounded-2xl p-5 space-y-3">
                                 <h4 class="font-bold text-pink-700 text-base flex items-center gap-2">💖 Karakter Pendidik Profesional</h4>
                                 <ul class="text-xs md:text-sm text-gray-600 space-y-2 list-disc list-inside">
                                     <li>Integritas & Dedikasi Tinggi terhadap Profesi</li>
-                                    <li>Resiliensi & Berpikir Terbuka terhadap Evaluasi</li>
-                                    <li>Inovatif dalam Mengatasi Tantangan Pembelajaran</li>
-                                    <li>Penyabar dan Pembelajar Sepanjang Hayat (*Lifelong Learner*)</li>
+                                    <li>Reflektif & Terbuka terhadap Evaluasi</li>
+                                    <li>Adaptif terhadap Perkembangan Teknologi</li>
+                                    <li>Pembelajar Sepanjang Hayat</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- E-PORTOFOLIO 2 -->
-                <div class="space-y-8 pt-6">
-                    <div class="flex items-center gap-4">
-                        <span class="px-4 py-1.5 bg-pink-600 text-white font-bold text-sm rounded-full">BAGIAN 2</span>
-                        <h2 class="text-2xl font-bold text-gray-900">E-Portofolio 2</h2>
-                        <div class="flex-grow h-px bg-pink-100"></div>
-                    </div>
-
-                    <div id="refleksi-pengalaman" class="bg-white border border-pink-100 rounded-3xl p-6 md:p-8 shadow-xs space-y-8 hover:border-pink-200 transition">
-                        <div class="flex items-center gap-3 border-b border-pink-100 pb-4">
-                            <span class="w-8 h-8 bg-pink-100 text-pink-600 rounded-xl flex items-center justify-center font-bold text-sm">1</span>
-                            <div>
-                                <h3 class="text-xl font-bold text-gray-800">Refleksi Pengalaman Belajar</h3>
-                                <p class="text-xs text-gray-500">Evaluasi Diri Pembelajaran Tahapan PPL Terbimbing</p>
-                            </div>
-                        </div>
-                        <div class="space-y-6">
-                            <div class="bg-pink-50/40 border border-pink-100 rounded-2xl p-5 md:p-6 space-y-3">
-                                <h4 class="text-pink-700 font-bold text-base flex items-center gap-2">🎓 Pembelajaran Selama Tahapan PPL Terbimbing (Awal hingga Akhir)</h4>
-                                <p class="text-xs md:text-sm text-gray-600 leading-relaxed text-justify">Selama menempuh PPL Terbimbing dari tahap observasi, asistensi mengajar, hingga praktik pembelajaran mandiri terbimbing sebanyak 3 siklus, saya mempelajari secara mendalam bagaimana menterjemahkan teori pedagogi ke dalam aksi nyata di kelas. Saya memahami pentingnya pemetaan profil belajar peserta didik, penyusunan rancangan pembelajaran berdiferensiasi, pengelolaan kelas yang responsif, serta pentingnya asesmen autentik untuk mengukur ketercapaian belajar secara adil.</p>
-                            </div>
-                            <div class="bg-pink-50/40 border border-pink-100 rounded-2xl p-5 md:p-6 space-y-3">
-                                <h4 class="text-pink-700 font-bold text-base flex items-center gap-2">⚡ Pengalaman Menantang & Solusi</h4>
-                                <p class="text-xs md:text-sm text-gray-600 leading-relaxed text-justify">Tantangan terbesar yang saya hadapi adalah mengelola keheterogenan konsentrasi dan pemahaman awal peserta didik saat pembelajaran berlangsung, serta estimasi waktu yang terkadang meleset dari RPP. Solusi yang saya terapkan adalah melakukan *ice breaking* terarah, memanfaatkan media visual interaktif untuk menarik atensi, serta fleksibilitas pengelompokan (*peer tutoring*) agar peserta didik yang lebih cepat paham dapat mendampingi temannya.</p>
-                            </div>
-                            <div class="bg-pink-50/40 border border-pink-100 rounded-2xl p-5 md:p-6 space-y-3">
-                                <h4 class="text-pink-700 font-bold text-base flex items-center gap-2">💬 Umpan Balik & Saran Konstruktif Diskusi Refleksi Akhir</h4>
-                                <p class="text-xs md:text-sm text-gray-600 leading-relaxed text-justify">Dalam diskusi refleksi bersama Dosen Pembimbing Lapangan dan Guru Pamong, saya menerima arahan konstruktif untuk lebih mempertegas penguatan motivasi di awal pembelajaran, serta melatih efisiensi alokasi waktu pada sesi penutup/refleksi siswa. Umpan balik ini menjadi pijakan berharga bagi saya untuk meningkatkan kemandirian dan kematangan mengajar pada tahap PPL Mandiri mendatang.</p>
-                            </div>
-                        </div>
-                    </div>
-
+                    <!-- Filosofi Mengajar (Bagian 4) -->
                     <div id="filosofi-mengajar" class="bg-white border border-pink-100 rounded-3xl p-6 md:p-8 shadow-xs space-y-6 hover:border-pink-200 transition">
                         <div class="flex items-center gap-3 border-b border-pink-100 pb-4">
-                            <span class="w-8 h-8 bg-pink-100 text-pink-600 rounded-xl flex items-center justify-center font-bold text-sm">2</span>
+                            <span class="w-8 h-8 bg-pink-100 text-pink-600 rounded-xl flex items-center justify-center font-bold text-sm">4</span>
                             <div>
                                 <h3 class="text-xl font-bold text-gray-800">Filosofi Mengajar</h3>
                                 <p class="text-xs text-gray-500">Ideologi Perjalanan Pendidik Profesional</p>
                             </div>
                         </div>
                         <div class="space-y-4 text-xs md:text-sm text-gray-600 leading-relaxed text-justify">
-                            <p class="bg-pink-50/30 p-5 rounded-2xl border border-pink-100">Filosofi mengajar saya berakar kuat pada pemikiran humanistik Ki Hajar Dewantara, yang menegaskan bahwa pendidikan adalah proses "menuntun segala kekuatan kodrat yang ada pada anak-anak agar mereka dapat mencapai keselamatan dan kebahagiaan yang setinggi-tingginya". Melalui pengalaman observasi dan asistensi pada PPL Terbimbing, saya menyadari bahwa setiap siswa hadir di kelas dengan latar belakang, minat, dan kecepatan belajar yang beragam. Oleh karena itu, tugas utama saya sebagai pendidik bukanlah memaksakan kehendak atau menyeragamkan pemahaman, melainkan menyediakan taman belajar yang subur tempat setiap benih potensi peserta didik dapat tumbuh berkembang secara optimal.</p>
-                            <p class="bg-pink-50/30 p-5 rounded-2xl border border-pink-100">Berlandaskan paradigma Konstruktivisme (Vygotsky & Piaget), saya percaya bahwa pengetahuan dibangun secara aktif oleh peserta didik melalui pengalaman belajar langsung dan interaksi sosial yang bermakna. Integrasi konsep *Technological Pedagogical Content Knowledge* (TPACK) serta pendekatan *Differentiated Instruction* menjadi fondasi strategis saya dalam merancang pembelajaran. Pembelajaran hendaknya tidak lagi berpusat pada guru (*teacher-centered*), melainkan menempatkan siswa sebagai subjek utama yang aktif mengeksplorasi, menganalisis, dan memecahkan masalah (*Problem-Based Learning*).</p>
-                            <p class="bg-pink-50/30 p-5 rounded-2xl border border-pink-100">Komitmen mendasar yang menjadi ideologi profesi saya adalah menjadi pendidik yang memiliki *Critical Reflective Practice* (Donald Schön). Saya meyakini bahwa seorang guru profesional tidak pernah berhenti belajar. Pengalaman selama PPL Terbimbing mengajarkan saya untuk senantiasa mengevaluasi diri, mendengarkan umpan balik dari peserta didik maupun kolega, serta adaptif terhadap dinamika perkembangan zaman. Dengan memegang teguh nilai ketulusan, kepedulian, dan profesionalisme, saya siap mendedikasikan diri untuk membimbing generasi muda Indonesia.</p>
+                            <p class="bg-pink-50/30 p-5 rounded-2xl border border-pink-100">Filosofi mengajar saya berakar pada pemikiran Ki Hajar Dewantara bahwa pendidikan merupakan proses menuntun segala kekuatan kodrat anak. Saya percaya setiap murid memiliki potensi, minat, dan kebutuhan belajar yang beragam. Oleh karena itu, saya berkomitmen menciptakan lingkungan belajar yang aman, inklusif, dan memberikan kesempatan bagi setiap murid untuk berkembang sesuai potensinya.</p>
+                            <p class="bg-pink-50/30 p-5 rounded-2xl border border-pink-100">Berlandaskan teori konstruktivisme Piaget dan Vygotsky, saya percaya bahwa pengetahuan dibangun melalui pengalaman dan interaksi yang bermakna. Dalam pembelajaran Informatika, saya berkomitmen mengintegrasikan TPACK, pembelajaran berdiferensiasi, dan Problem Based Learning untuk mendorong murid berpikir kritis, berkolaborasi, serta memecahkan masalah kontekstual.</p>
+                            <p class="bg-pink-50/30 p-5 rounded-2xl border border-pink-100">Berlandaskan pemikiran Donald Schön tentang Reflective Practice, saya meyakini bahwa guru profesional harus senantiasa belajar dan memperbaiki diri. Pengalaman PPL mengajarkan saya pentingnya mengevaluasi praktik pembelajaran, terbuka terhadap umpan balik, dan adaptif terhadap kebutuhan murid. Saya berkomitmen untuk terus mengembangkan kompetensi dan memberikan dampak positif bagi perkembangan murid.</p>
                         </div>
                     </div>
                 </div>
@@ -515,13 +484,13 @@
                     <div>
                         <span class="text-xs font-bold text-rose-600 uppercase tracking-widest bg-rose-100 px-3 py-1 rounded-full">Praktik Mandiri</span>
                         <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 mt-2">PPL Mandiri</h1>
-                        <p class="text-gray-600 mt-1">Kumpulan E-Portofolio 1 & 2 selama pelaksanaan PPL Mandiri</p>
+                        <p class="text-gray-600 mt-1">Dokumentasi Praktik selama pelaksanaan PPL Mandiri</p>
                     </div>
                     <div class="relative w-full md:w-auto">
                         <button onclick="toggleEportMenuMandiri()" class="w-full md:w-auto flex items-center justify-between gap-3 px-5 py-3 bg-white border border-pink-200 rounded-2xl shadow-sm hover:border-pink-300 hover:shadow-md text-pink-700 font-semibold cursor-pointer transition-all">
                             <span class="flex items-center gap-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
-                                Navigasi E-Portofolio Mandiri
+                                Navigasi PPL Mandiri
                             </span>
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform duration-200" id="menu-arrow-mandiri" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
                         </button>
@@ -531,34 +500,17 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" /></svg>
                                 <span class="text-white font-bold text-sm tracking-wide">Daftar E-Portofolio Mandiri</span>
                             </div>
-                            <div class="p-3 space-y-3">
-                                <div>
-                                    <div class="px-2 py-1.5 flex items-center gap-2">
-                                        <span class="w-6 h-6 rounded-lg bg-gradient-to-br from-rose-500 to-pink-400 text-white flex items-center justify-center text-xs font-bold shadow-sm">1</span>
-                                        <span class="text-xs font-bold text-rose-500 uppercase tracking-wider">E-Portofolio 1</span>
-                                    </div>
-                                    <div class="mt-1 space-y-1">
-                                        <a href="#m-analisis-artefak" onclick="closeEportMenuMandiri()" class="group flex items-center gap-3 px-3 py-2.5 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-rose-50 hover:to-pink-50 hover:text-rose-700 rounded-xl transition-all">
-                                            <span class="w-8 h-8 rounded-lg bg-rose-50 group-hover:bg-rose-500 text-rose-600 group-hover:text-white flex items-center justify-center text-base transition-all shadow-2xs">📄</span>
-                                            <span class="font-medium">Analisis Artefak (Siklus 1)</span>
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-auto text-gray-300 group-hover:text-rose-500 group-hover:translate-x-1 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="h-px bg-gradient-to-r from-transparent via-rose-200 to-transparent"></div>
-                                <div>
-                                    <div class="px-2 py-1.5 flex items-center gap-2">
-                                        <span class="w-6 h-6 rounded-lg bg-gradient-to-br from-rose-600 to-pink-500 text-white flex items-center justify-center text-xs font-bold shadow-sm">2</span>
-                                        <span class="text-xs font-bold text-rose-500 uppercase tracking-wider">E-Portofolio 2</span>
-                                    </div>
-                                    <div class="mt-1 space-y-1">
-                                        <a href="#m-analisis-artefak-2" onclick="closeEportMenuMandiri()" class="group flex items-center gap-3 px-3 py-2.5 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-rose-50 hover:to-pink-50 hover:text-rose-700 rounded-xl transition-all">
-                                            <span class="w-8 h-8 rounded-lg bg-rose-50 group-hover:bg-rose-500 text-rose-600 group-hover:text-white flex items-center justify-center text-base transition-all shadow-2xs">📄</span>
-                                            <span class="font-medium">Analisis Artefak (Siklus 2, 3, 4)</span>
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-auto text-gray-300 group-hover:text-rose-500 group-hover:translate-x-1 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
-                                        </a>
-                                    </div>
-                                </div>
+                            <div class="p-3 space-y-2">
+                                <a href="#m-analisis-artefak" onclick="closeEportMenuMandiri()" class="group flex items-center gap-3 px-3 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-rose-50 hover:to-pink-50 hover:text-rose-700 rounded-xl transition-all">
+                                    <span class="w-8 h-8 rounded-lg bg-rose-50 group-hover:bg-rose-500 text-rose-600 group-hover:text-white flex items-center justify-center text-base transition-all shadow-2xs">📄</span>
+                                    <span class="font-semibold">Analisis Artefak 1 (UTS)</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-auto text-gray-300 group-hover:text-rose-500 group-hover:translate-x-1 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                                </a>
+                                <a href="#m-analisis-artefak-2" onclick="closeEportMenuMandiri()" class="group flex items-center gap-3 px-3 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-rose-50 hover:to-pink-50 hover:text-rose-700 rounded-xl transition-all">
+                                    <span class="w-8 h-8 rounded-lg bg-rose-50 group-hover:bg-rose-500 text-rose-600 group-hover:text-white flex items-center justify-center text-base transition-all shadow-2xs">📄</span>
+                                    <span class="font-semibold">Analisis Artefak 2 (UAS)</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-auto text-gray-300 group-hover:text-rose-500 group-hover:translate-x-1 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -566,18 +518,12 @@
             </section>
 
             <div class="max-w-5xl mx-auto px-6 py-12 space-y-16">
-                <!-- E-PORTOFOLIO 1 MANDIRI -->
+                <!-- E-PORTOFOLIO 1 MANDIRI (ANALISIS ARTEFAK SIKLUS 1) -->
                 <div class="space-y-8">
-                    <div class="flex items-center gap-4">
-                        <span class="px-4 py-1.5 bg-rose-500 text-white font-bold text-sm rounded-full">BAGIAN 1</span>
-                        <h2 class="text-2xl font-bold text-gray-900">E-Portofolio 1 (PPL Mandiri)</h2>
-                        <div class="flex-grow h-px bg-pink-100"></div>
-                    </div>
-
                     <div id="m-analisis-artefak" class="bg-white border border-pink-100 rounded-3xl p-6 md:p-8 shadow-xs space-y-6 hover:border-pink-200 transition">
                         <div class="flex items-center gap-3">
                             <span class="w-8 h-8 bg-rose-100 text-rose-600 rounded-xl flex items-center justify-center font-bold text-sm">1</span>
-                            <h3 class="text-xl font-bold text-gray-800">Analisis Artefak (Siklus 1)</h3>
+                            <h3 class="text-xl font-bold text-gray-800">Analisis Artefak (UTS)</h3>
                         </div>
 
                         <div class="flex flex-wrap gap-2 border-b border-gray-200 pb-3">
@@ -585,7 +531,6 @@
                             <button onclick="switchArtefakTabMandiri('media-pembelajaran')" id="m-tab-media-pembelajaran" class="m-artefak-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer text-gray-600 hover:text-rose-600 hover:bg-pink-50">🖼️ Media Pembelajaran</button>
                             <button onclick="switchArtefakTabMandiri('lkpd')" id="m-tab-lkpd" class="m-artefak-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer text-gray-600 hover:text-rose-600 hover:bg-pink-50">📋 LKPD</button>
                             <button onclick="switchArtefakTabMandiri('instrumen-asesmen')" id="m-tab-instrumen-asesmen" class="m-artefak-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer text-gray-600 hover:text-rose-600 hover:bg-pink-50">📑 Instrumen Asesmen</button>
-                            <button onclick="switchArtefakTabMandiri('dokumentasi')" id="m-tab-dokumentasi" class="m-artefak-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer text-gray-600 hover:text-rose-600 hover:bg-pink-50">📷 Dokumentasi</button>
                         </div>
 
                         <div class="bg-rose-50/30 border border-pink-100 rounded-2xl p-6 space-y-6">
@@ -597,19 +542,19 @@
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div class="bg-white p-5 rounded-xl border border-pink-100/80 shadow-2xs space-y-2">
                                     <h5 class="font-bold text-rose-700 text-sm flex items-center gap-2">⚠️ Kendala Penyusunan</h5>
-                                    <p id="m-artefak-kendala" class="text-xs md:text-sm text-gray-600 leading-relaxed"></p>
+                                    <p id="m-artefak-kendala" class="text-xs md:text-sm text-gray-600 leading-relaxed text-justify"></p>
                                 </div>
                                 <div class="bg-white p-5 rounded-xl border border-pink-100/80 shadow-2xs space-y-2">
                                     <h5 class="font-bold text-rose-700 text-sm flex items-center gap-2">🧠 Teori / Konsep Pedagogi</h5>
-                                    <p id="m-artefak-teori" class="text-xs md:text-sm text-gray-600 leading-relaxed"></p>
+                                    <p id="m-artefak-teori" class="text-xs md:text-sm text-gray-600 leading-relaxed text-justify"></p>
                                 </div>
                                 <div class="bg-white p-5 rounded-xl border border-pink-100/80 shadow-2xs space-y-2">
                                     <h5 class="font-bold text-rose-700 text-sm flex items-center gap-2">🎯 Faktor Keberhasilan</h5>
-                                    <p id="m-artefak-keberhasilan" class="text-xs md:text-sm text-gray-600 leading-relaxed"></p>
+                                    <p id="m-artefak-keberhasilan" class="text-xs md:text-sm text-gray-600 leading-relaxed text-justify"></p>
                                 </div>
                                 <div class="bg-white p-5 rounded-xl border border-pink-100/80 shadow-2xs space-y-2">
-                                    <h5 class="font-bold text-rose-700 text-sm flex items-center gap-2">🔄 Adaptasi Situasi Kelas Lain</h5>
-                                    <p id="m-artefak-adaptasi" class="text-xs md:text-sm text-gray-600 leading-relaxed"></p>
+                                    <h5 class="font-bold text-rose-700 text-sm flex items-center gap-2">🔄 Penyesuaian Situasi Kelas</h5>
+                                    <p id="m-artefak-adaptasi" class="text-xs md:text-sm text-gray-600 leading-relaxed text-justify"></p>
                                 </div>
                             </div>
 
@@ -631,18 +576,12 @@
                     </div>
                 </div>
 
-                <!-- E-PORTOFOLIO 2 MANDIRI -->
+                <!-- E-PORTOFOLIO 2 MANDIRI (ANALISIS ARTEFAK SIKLUS 2, 3, 4) -->
                 <div class="space-y-8 pt-6">
-                    <div class="flex items-center gap-4">
-                        <span class="px-4 py-1.5 bg-rose-600 text-white font-bold text-sm rounded-full">BAGIAN 2</span>
-                        <h2 class="text-2xl font-bold text-gray-900">E-Portofolio 2 (PPL Mandiri)</h2>
-                        <div class="flex-grow h-px bg-pink-100"></div>
-                    </div>
-
                     <div id="m-analisis-artefak-2" class="bg-white border border-pink-100 rounded-3xl p-6 md:p-8 shadow-xs space-y-6 hover:border-pink-200 transition">
                         <div class="flex items-center gap-3">
-                            <span class="w-8 h-8 bg-rose-100 text-rose-600 rounded-xl flex items-center justify-center font-bold text-sm">1</span>
-                            <h3 class="text-xl font-bold text-gray-800">Analisis Artefak (Siklus 2, Siklus 3, Siklus 4)</h3>
+                            <span class="w-8 h-8 bg-rose-100 text-rose-600 rounded-xl flex items-center justify-center font-bold text-sm">2</span>
+                            <h3 class="text-xl font-bold text-gray-800">Analisis Artefak (UAS)</h3>
                         </div>
 
                         <div class="flex flex-wrap gap-2 border-b border-gray-200 pb-3">
@@ -650,7 +589,6 @@
                             <button onclick="switchArtefakTabMandiriEport2('media-pembelajaran')" id="m2-tab-media-pembelajaran" class="m2-artefak-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer text-gray-600 hover:text-rose-600 hover:bg-pink-50">🖼️ Media Pembelajaran</button>
                             <button onclick="switchArtefakTabMandiriEport2('lkpd')" id="m2-tab-lkpd" class="m2-artefak-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer text-gray-600 hover:text-rose-600 hover:bg-pink-50">📋 LKPD</button>
                             <button onclick="switchArtefakTabMandiriEport2('instrumen-asesmen')" id="m2-tab-instrumen-asesmen" class="m2-artefak-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer text-gray-600 hover:text-rose-600 hover:bg-pink-50">📑 Instrumen Asesmen</button>
-                            <button onclick="switchArtefakTabMandiriEport2('dokumentasi')" id="m2-tab-dokumentasi" class="m2-artefak-tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition cursor-pointer text-gray-600 hover:text-rose-600 hover:bg-pink-50">📷 Dokumentasi</button>
                         </div>
 
                         <div class="bg-rose-50/30 border border-pink-100 rounded-2xl p-6 space-y-6">
@@ -662,19 +600,19 @@
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div class="bg-white p-5 rounded-xl border border-pink-100/80 shadow-2xs space-y-2">
                                     <h5 class="font-bold text-rose-700 text-sm flex items-center gap-2">⚠️ Kendala Penyusunan</h5>
-                                    <p id="m2-artefak-kendala" class="text-xs md:text-sm text-gray-600 leading-relaxed"></p>
+                                    <p id="m2-artefak-kendala" class="text-xs md:text-sm text-gray-600 leading-relaxed text-justify"></p>
                                 </div>
                                 <div class="bg-white p-5 rounded-xl border border-pink-100/80 shadow-2xs space-y-2">
                                     <h5 class="font-bold text-rose-700 text-sm flex items-center gap-2">🧠 Teori / Konsep Pedagogi</h5>
-                                    <p id="m2-artefak-teori" class="text-xs md:text-sm text-gray-600 leading-relaxed"></p>
+                                    <p id="m2-artefak-teori" class="text-xs md:text-sm text-gray-600 leading-relaxed text-justify"></p>
                                 </div>
                                 <div class="bg-white p-5 rounded-xl border border-pink-100/80 shadow-2xs space-y-2">
                                     <h5 class="font-bold text-rose-700 text-sm flex items-center gap-2">🎯 Faktor Keberhasilan</h5>
-                                    <p id="m2-artefak-keberhasilan" class="text-xs md:text-sm text-gray-600 leading-relaxed"></p>
+                                    <p id="m2-artefak-keberhasilan" class="text-xs md:text-sm text-gray-600 leading-relaxed text-justify"></p>
                                 </div>
                                 <div class="bg-white p-5 rounded-xl border border-pink-100/80 shadow-2xs space-y-2">
-                                    <h5 class="font-bold text-rose-700 text-sm flex items-center gap-2">🔄 Adaptasi Situasi Kelas Lain</h5>
-                                    <p id="m2-artefak-adaptasi" class="text-xs md:text-sm text-gray-600 leading-relaxed"></p>
+                                    <h5 class="font-bold text-rose-700 text-sm flex items-center gap-2">🔄 Penyesuaian Situasi Kelas</h5>
+                                    <p id="m2-artefak-adaptasi" class="text-xs md:text-sm text-gray-600 leading-relaxed text-justify"></p>
                                 </div>
                             </div>
 
@@ -707,7 +645,7 @@
 
     <footer class="bg-white border-t border-pink-100 py-8 text-center text-sm text-gray-500">
         <div class="max-w-6xl mx-auto px-6 space-y-2">
-            <p class="font-medium text-gray-700">Portofolio Praktik Pengalaman Lapangan (PPL) — PPG Prajabatan</p>
+            <p class="font-medium text-gray-700">Portofolio Praktik Pengalaman Lapangan (PPL) — PPG Calon Guru</p>
             <p>© 2026 Putri Fitria Melinia Sari (NIM: 25105260629). Hak Cipta Dilindungi.</p>
         </div>
     </footer>
@@ -729,10 +667,10 @@
         const artefakData = {
             'modul-ajar': {
                 title: '📖 Modul Ajar / RPP',
-                kendala: 'Menyesuaikan alokasi waktu kegiatan pembelajaran dengan keberagaman tingkat pemahaman awal peserta didik di kelas yang lumayan heterogen.',
-                teori: 'Mengadopsi pendekatan Differentiated Instruction (Pembelajaran Berdiferensiasi) dan teori konstruktivisme Vygotsky (Zone of Proximal Development).',
-                keberhasilan: 'Perencanaan langkah pembelajaran yang terstruktur, kejelasan tujuan pembelajaran, serta arahan bimbingan reflektif dari Guru Pamong.',
-                adaptasi: 'Pengelompokan siswa secara dinamis berdasarkan kesiapan belajar serta fleksibilitas tempo pengerjaan tugas LKPD.',
+                kendala: 'Kendala utama dalam penyusunan RPP adalah menyesuaikan alokasi waktu setiap kegiatan pembelajaran dengan keberagaman tingkat pemahaman awal murid di kelas yang cukup heterogen. Perbedaan kesiapan belajar membuat murid membutuhkan waktu dan tingkat pendampingan yang berbeda dalam memahami materi maupun menyelesaikan tugas.',
+                teori: 'Penyusunan RPP mengacu pada pendekatan Differentiated Instruction (pembelajaran berdiferensiasi) dengan mempertimbangkan teori konstruktivisme Vygotsky, khususnya konsep Zone of Proximal Development (ZPD). Pendekatan Problem Based Learning (PBL) juga diterapkan untuk mendorong murid membangun pemahaman melalui analisis dan penyelesaian masalah kontekstual. Proses pembelajaran dirancang secara aktif, kolaboratif, dan berpusat pada murid untuk mengembangkan keterampilan berpikir kritis, komunikasi, dan pemecahan masalah.',
+                keberhasilan: 'Keberhasilan perencanaan pembelajaran didukung oleh penyusunan langkah-langkah pembelajaran yang terstruktur, tujuan pembelajaran yang jelas, serta bimbingan dan masukan reflektif dari Guru Pamong. Selain itu, pemilihan materi yang kontekstual, penggunaan media digital yang bervariasi, keterlibatan murid dalam diskusi, serta keselarasan asesmen dengan tujuan pembelajaran menjadi faktor penting dalam mendukung ketercapaian pembelajaran.',
+                adaptasi: 'Rancangan pembelajaran perlu disesuaikan dengan kondisi dan kebutuhan murid melalui pengelompokan yang fleksibel berdasarkan kesiapan belajar, pemberian pendampingan sesuai kebutuhan, serta penyesuaian waktu pengerjaan LKPD. Ke depannya, strategi diferensiasi perlu diperkuat agar setiap murid memperoleh kesempatan belajar sesuai dengan kemampuan dan kebutuhannya.',
                 pdfDocs: {
                     'siklus-1': { title: 'Modul Ajar Siklus 1 - Hak Kekayaan Intelektual', previewUrl: 'https://drive.google.com/file/d/1aOmvfEOC7LJ-exv6DdGKQdCNJuaA-7nf/preview', downloadUrl: 'https://drive.google.com/file/d/1aOmvfEOC7LJ-exv6DdGKQdCNJuaA-7nf/view?usp=sharing' },
                     'siklus-2': { title: 'Modul Ajar Siklus 2 - Etika & Budaya Digital', previewUrl: 'https://drive.google.com/file/d/1aOmvfEOC7LJ-exv6DdGKQdCNJuaA-7nf/preview', downloadUrl: 'https://drive.google.com/file/d/1aOmvfEOC7LJ-exv6DdGKQdCNJuaA-7nf/view?usp=sharing' },
@@ -742,10 +680,10 @@
             },
             'media-pembelajaran': {
                 title: '🖼️ Media Pembelajaran',
-                kendala: 'Memilih platform interaktif yang fleksibel dan dapat diakses lancar oleh seluruh siswa tanpa kendala sinyal.',
-                teori: 'Teori Cognitive Load dan Cognitive Theory of Multimedia Learning (Mayer).',
-                keberhasilan: 'Visualisasi grafik yang menarik mampu meningkatkan fokus atensi dan motivasi belajar siswa hingga 90%.',
-                adaptasi: 'Menyediakan versi cetak/offline dari presentasi interaktif sebagai antisipasi pemadaman atau kendala koneksi.',
+                kendala: 'Kendala dalam penyusunan media pembelajaran adalah memilih dan mengombinasikan platform digital yang interaktif, mudah digunakan, serta dapat diakses oleh seluruh murid dengan kondisi jaringan internet yang beragam. Selain itu, perlu mempertimbangkan penyajian materi agar tidak terlalu padat, tetap menarik, dan sesuai dengan karakteristik serta kebutuhan belajar murid.',
+                teori: 'Pengembangan media pembelajaran mengacu pada teori Cognitive Load dengan memperhatikan penyajian informasi agar tidak membebani kapasitas kognitif murid. Materi disajikan secara terstruktur melalui kombinasi teks, visual, infografis, dan video untuk membantu murid memahami konsep secara bertahap. Selain itu, prinsip konstruktivisme diterapkan melalui pertanyaan pemantik, diskusi, dan kuis interaktif yang mendorong murid menghubungkan informasi baru dengan pengetahuan yang telah dimiliki.',
+                keberhasilan: 'Keberhasilan penggunaan media pembelajaran didukung oleh kesesuaian materi dengan kehidupan sehari-hari murid, penyajian visual yang menarik dan terstruktur, serta pemilihan media yang sesuai dengan tujuan pembelajaran. Penggunaan PPT, infografis, video pembelajaran, dan kuis interaktif seperti Quizizz juga membantu memvariasikan pengalaman belajar, meningkatkan partisipasi, serta memberikan kesempatan kepada murid untuk menguji pemahamannya.',
+                adaptasi: 'Media pembelajaran perlu disesuaikan dengan kondisi fasilitas dan akses internet murid. Oleh karena itu, perlu disediakan alternatif penggunaan media secara offline, seperti salinan materi presentasi atau bahan ajar cetak, untuk mengantisipasi kendala jaringan. Penyajian materi juga akan lebih dioptimalkan melalui penggunaan visual dan infografis dengan teks yang ringkas. Selain itu, aktivitas interaktif berbasis digital akan dikembangkan secara proporsional agar dapat meningkatkan keterlibatan murid tanpa bergantung sepenuhnya pada koneksi internet.',
                 pdfDocs: {
                     'siklus-1': { title: 'Media Pembelajaran Siklus 1', previewUrl: 'https://drive.google.com/file/d/15tt4KlJddMB3Dpy97_8OXeox8z4sjkNe/preview', downloadUrl: 'https://drive.google.com/file/d/15tt4KlJddMB3Dpy97_8OXeox8z4sjkNe/view?usp=sharing' },
                     'siklus-2': { title: 'Media Pembelajaran Siklus 2', previewUrl: 'https://drive.google.com/file/d/1l2xHwKOTktHqDCz4nXSOlFu-yn5-evQq/preview', downloadUrl: 'https://drive.google.com/file/d/1l2xHwKOTktHqDCz4nXSOlFu-yn5-evQq/view?usp=sharing' },
@@ -755,10 +693,10 @@
             },
             'lkpd': {
                 title: '📋 Lembar Kerja Peserta Didik (LKPD)',
-                kendala: 'Merumuskan instruksi pengerjaan proyek agar tetap ringkas namun mudah dipahami secara mandiri oleh siswa.',
-                teori: 'Prinsip Scaffolding dan Problem-Based Learning (PBL).',
-                keberhasilan: 'LKPD berbasis studi kasus nyata berhasil mendorong diskusi kritis antar anggota kelompok.',
-                adaptasi: 'Menambahkan petunjuk visual (ikon & flowchart) bagi siswa bertipe belajar visual.',
+                kendala: 'Kendala dalam penyusunan LKPD adalah merumuskan instruksi dan tahapan pengerjaan proyek agar tetap ringkas, sistematis, dan mudah dipahami oleh murid secara mandiri. Selain itu, aktivitas yang dirancang perlu mempertimbangkan perbedaan kemampuan murid agar seluruh anggota kelompok dapat berkontribusi dalam menyelesaikan tugas.',
+                teori: 'Penyusunan LKPD mengacu pada prinsip Scaffolding dan model Problem Based Learning (PBL). Prinsip Scaffolding diterapkan melalui pemberian petunjuk dan tahapan pengerjaan secara bertahap untuk membantu murid menyelesaikan tugas. Sementara itu, PBL diwujudkan melalui penyajian permasalahan kontekstual yang mendorong murid mengidentifikasi masalah, menganalisis informasi, merumuskan solusi, dan mengomunikasikan hasil pemikirannya.',
+                keberhasilan: 'Keberhasilan penggunaan LKPD didukung oleh penyajian studi kasus yang dekat dengan kehidupan murid sehingga memudahkan mereka menghubungkan materi dengan situasi nyata. Pertanyaan pemantik dan tahapan aktivitas yang terarah juga mendorong diskusi kritis, pertukaran ide, serta kolaborasi antaranggota kelompok dalam merumuskan solusi.',
+                adaptasi: 'LKPD dapat dikembangkan dengan menambahkan unsur visual, seperti gambar, diagram, atau infografis untuk memperjelas informasi dan meningkatkan keterbacaan. Selain itu, instruksi dan tahapan pengerjaan perlu dibuat lebih terstruktur, dilengkapi contoh atau petunjuk pada bagian yang berpotensi menimbulkan kesulitan, serta memberikan ruang bagi setiap anggota kelompok untuk berkontribusi sesuai kemampuannya.',
                 pdfDocs: {
                     'siklus-1': { title: 'LKPD Siklus 1', previewUrl: 'https://drive.google.com/file/d/1SkxPaRIX38qduTkNeOy2RMXXTRr1PKL6/preview', downloadUrl: 'https://drive.google.com/file/d/1SkxPaRIX38qduTkNeOy2RMXXTRr1PKL6/view?usp=sharing' },
                     'siklus-2': { title: 'LKPD Siklus 2', previewUrl: 'https://drive.google.com/file/d/1XbmWmnoYOcSeKhbKkJMGDyexCEk72IWE/preview', downloadUrl: 'https://drive.google.com/file/d/1XbmWmnoYOcSeKhbKkJMGDyexCEk72IWE/view?usp=sharing' },
@@ -768,10 +706,10 @@
             },
             'instrumen-asesmen': {
                 title: '📑 Instrumen Asesmen',
-                kendala: 'Menyusun rubrik penilaian autentik yang objektif untuk mengukur keterampilan proses dan sikap sosial.',
-                teori: 'Authentic Assessment dan Asesmen Formatif (Assessment as/for Learning).',
-                keberhasilan: 'Kriteria rubrik yang transparan membantu siswa memahami ekspektasi tugas dengan jelas.',
-                adaptasi: 'Menggunakan format asesmen antarteman (*peer assessment*) yang lebih kontekstual.',
+                kendala: 'Kendala dalam penyusunan instrumen asesmen adalah merancang rubrik penilaian yang objektif dan terukur untuk menilai ketercapaian kompetensi, keterampilan proses, serta sikap sosial murid. Tantangan lainnya adalah mengatur waktu pelaksanaan penilaian agar tidak mengganggu jalannya pembelajaran, serta mengakomodasi perbedaan kemampuan murid dalam memahami dan menyelesaikan soal berbasis teks.',
+                teori: 'Penyusunan instrumen mengacu pada prinsip Authentic Assessment dan asesmen formatif, khususnya Assessment for Learning dan Assessment as Learning. Asesmen dirancang untuk mengukur ketercapaian tujuan pembelajaran melalui berbagai teknik, seperti tes, proyek, dan observasi. Selain itu, murid dilibatkan dalam proses refleksi dan penilaian diri agar mampu mengenali perkembangan, memahami kesulitan, serta menentukan hal yang perlu diperbaiki dalam proses belajarnya.',
+                keberhasilan: 'Keberhasilan pelaksanaan asesmen didukung oleh kejelasan kriteria dan indikator penilaian sehingga murid memahami ekspektasi yang harus dicapai. Kesesuaian butir soal dengan tujuan pembelajaran, penggunaan teknik penilaian yang bervariasi, serta pemberian umpan balik yang konstruktif juga menjadi faktor penting. Dengan demikian, asesmen dapat memberikan gambaran yang lebih menyeluruh mengenai pengetahuan, keterampilan, dan sikap murid.',
+                adaptasi: 'Instrumen asesmen perlu dikembangkan dengan mempertimbangkan karakteristik dan kebutuhan belajar murid. Penggunaan peer assessment dapat diterapkan melalui kegiatan penilaian antarteman dengan kriteria yang sederhana dan jelas. Selain itu, soal berbasis HOTS perlu diperkuat melalui konteks permasalahan yang dekat dengan kehidupan murid.',
                 pdfDocs: {
                     'siklus-1': { title: 'Instrumen Asesmen Siklus 1', previewUrl: 'https://drive.google.com/file/d/10FLv0okHo5LmZhirfiEmoPGS-btrzz0v/preview', downloadUrl: 'https://drive.google.com/file/d/10FLv0okHo5LmZhirfiEmoPGS-btrzz0v/view?usp=sharing' },
                     'siklus-2': { title: 'Instrumen Asesmen Siklus 2', previewUrl: 'https://drive.google.com/file/d/15fj-ZCpAKfnxhPEg58IQK4zRxmWR2Lwf/preview', downloadUrl: 'https://drive.google.com/file/d/15fj-ZCpAKfnxhPEg58IQK4zRxmWR2Lwf/view?usp=sharing' },
@@ -786,9 +724,6 @@
             }
         };
 
-        /* ===== DATA GALERI DOKUMENTASI PPL TERBIMBING =====
-           ⚠️ Ganti "GANTI_ID_PRAKTIK_MENGAJAR_VIDEO_3" & "GANTI_ID_NONMENGAJAR_5" dengan ID asli.
-        */
         const dokumentasiData = {
             'penerjunan': {
                 title: 'Penerjunan Mahasiswa PPL',
@@ -815,7 +750,7 @@
                     { type: 'image', id: '1tS-wM0846ElYiYaT6_R8tKSF0ndraJih', caption: 'Foto bersama murid kelas X SIJA 1' },
                     { type: 'video', id: '1xWuJsyvR_n6C_g9jwQwHYAcyDJ8G32NA', caption: 'Rekaman praktik mengajar Siklus 1 di depan kelas' },
                     { type: 'video', id: '1COlwn0i9FbeIn1VEPI4AK1IyLWFXDl26', caption: 'Rekaman praktik mengajar Siklus 2 di depan kelas' },
-                    { type: 'video', id: 'GANTI_ID_PRAKTIK_MENGAJAR_VIDEO_3', caption: 'Rekaman praktik mengajar Siklus 3 di depan kelas' }
+                    { type: 'video', id: '1b-YdUe-8tmusJ6y4k2KIM-XvDoynzrdQ', caption: 'Rekaman praktik mengajar Siklus 3 di depan kelas' }
                 ]
             },
             'non-mengajar': {
@@ -1089,6 +1024,26 @@
             const activeBtn = document.getElementById(`m2-tab-s-${siklusKey}`);
             if (activeBtn) activeBtn.className = "m2-siklus-tab px-5 py-2 rounded-xl text-sm font-semibold transition cursor-pointer bg-white text-rose-600 border border-pink-200 shadow-xs";
         }
+
+        // ====== CLOSE DROPDOWN ON CLICK OUTSIDE ======
+        document.addEventListener('click', function(e) {
+            // PPL Terbimbing dropdown
+            const dropdown = document.getElementById('eport-dropdown');
+            const toggleBtn = e.target.closest('button[onclick="toggleEportMenu()"]');
+            if (dropdown && !dropdown.classList.contains('hidden')) {
+                if (!dropdown.contains(e.target) && !toggleBtn) {
+                    closeEportMenu();
+                }
+            }
+            // PPL Mandiri dropdown
+            const dropdownMandiri = document.getElementById('eport-dropdown-mandiri');
+            const toggleBtnMandiri = e.target.closest('button[onclick="toggleEportMenuMandiri()"]');
+            if (dropdownMandiri && !dropdownMandiri.classList.contains('hidden')) {
+                if (!dropdownMandiri.contains(e.target) && !toggleBtnMandiri) {
+                    closeEportMenuMandiri();
+                }
+            }
+        });
 
         window.addEventListener('DOMContentLoaded', () => {
             switchArtefakTab('modul-ajar');
